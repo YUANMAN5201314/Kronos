@@ -1,9 +1,10 @@
 from __future__ import annotations
 
+import json
 import os
 import time
 from dataclasses import dataclass
-from datetime import datetime, timezone
+from datetime import timezone
 from email.utils import parsedate_to_datetime
 from urllib.parse import quote_plus, urlencode
 from xml.etree import ElementTree
@@ -18,6 +19,7 @@ SYSTEM_NAME = "美股监控系统 V2 云端版"
 INTERVAL = "5m"
 DOWNLOAD_PERIOD = "10d"
 DEFAULT_QUOTE_LIMIT = 30
+SCHEDULED_SCAN_URL = "https://raw.githubusercontent.com/YUANMAN5201314/Kronos/master/scan_results/latest.json"
 DEFAULT_TICKERS = [
     "QQQ", "NVDA", "MSFT", "UNH", "NEE", "CBRS", "INTC", "NVT", "MRVL", "VRT",
     "AVGO", "ANET", "ETN", "ABB", "NOK", "AMAT", "MU", "TSLA", "DLR", "RKLB",
@@ -59,6 +61,7 @@ COLUMN_LABELS = {
     "cost": "成本",
     "cost_distance_pct": "距成本%",
     "twelvedata_price": "Twelve报价",
+    "twelvedata_status": "Twelve状态",
     "yfinance_price": "yfinance报价",
     "quote_check": "双源核对",
     "quote_diff_pct": "价差%",
@@ -67,6 +70,7 @@ COLUMN_LABELS = {
     "price_vs_vwap_pct": "距VWAP%",
     "vwap_hold_15m": "15分钟站上VWAP",
     "status": "行情状态",
+    "last_timestamp": "行情时间",
     "quote_note": "报价说明",
 }
 
@@ -146,24 +150,24 @@ def download_market_data(tickers: tuple[str, ...]) -> dict[str, MarketRow]:
     return rows
 
 
-def quote_from_yfinance(history: pd.DataFrame | None) -> tuple[float | None, str]:
+def quote_from_yfinance(history: pd.DataFrame | None) -> tuple[float | None, str | None]:
     if history is None or history.empty:
-        return None, "无 yfinance 5分钟数据"
+        return None, None
     return float(history["close"].iloc[-1]), str(history["timestamps"].iloc[-1])
 
 
-def quote_from_twelvedata(ticker: str) -> tuple[float | None, str]:
+def quote_from_twelvedata(ticker: str) -> tuple[float | None, str, str | None]:
     token = secret("TWELVEDATA_API_KEY")
     if not token:
-        return None, "缺少 TWELVEDATA_API_KEY"
+        return None, "缺少密钥", None
     try:
         url = "https://api.twelvedata.com/quote?" + urlencode({"symbol": ticker, "apikey": token})
         payload = requests.get(url, timeout=15).json()
         if payload.get("status") == "error":
-            return None, payload.get("message", "Twelve Data错误")
-        return float(payload.get("close") or payload.get("price")), payload.get("datetime") or "Twelve Data"
+            return None, payload.get("message", "Twelve Data错误"), None
+        return float(payload.get("close") or payload.get("price")), "ok", payload.get("datetime") or payload.get("timestamp")
     except Exception as exc:
-        return None, str(exc)
+        return None, str(exc), None
 
 
 def compare_quotes(twelve: float | None, yf_price: float | None) -> tuple[str, float | None]:
@@ -192,7 +196,7 @@ def add_vwap(data: pd.DataFrame | None) -> pd.DataFrame:
 def summarize_market(ticker: str, row: MarketRow, quote_index: int, quote_limit: int) -> dict[str, object]:
     profile = profile_for(ticker)
     yf_price, yf_note = quote_from_yfinance(row.history)
-    twelve_price, twelve_note = quote_from_twelvedata(ticker) if quote_index < quote_limit else (None, "超过复核上限")
+    twelve_price, twelve_status, twelve_time = quote_from_twelvedata(ticker) if quote_index < quote_limit else (None, "超过复核上限", None)
     quote_check, quote_diff = compare_quotes(twelve_price, yf_price)
     hist = add_vwap(row.history)
     vwap = float(hist["vwap"].iloc[-1]) if not hist.empty and "vwap" in hist else np.nan
@@ -217,6 +221,7 @@ def summarize_market(ticker: str, row: MarketRow, quote_index: int, quote_limit:
         "cost_distance_pct": (yf_price / cost - 1) * 100 if yf_price and cost else np.nan,
         "yfinance_price": yf_price,
         "twelvedata_price": twelve_price,
+        "twelvedata_status": twelve_status,
         "quote_check": quote_check,
         "quote_diff_pct": quote_diff,
         "change_pct": change_pct,
@@ -224,7 +229,8 @@ def summarize_market(ticker: str, row: MarketRow, quote_index: int, quote_limit:
         "price_vs_vwap_pct": price_vs_vwap,
         "vwap_hold_15m": vwap_hold_15m,
         "status": row.message,
-        "quote_note": f"yfinance={yf_note}; Twelve={twelve_note}",
+        "last_timestamp": yf_note,
+        "quote_note": f"yfinance={yf_note or '无'}；Twelve={twelve_time or twelve_status}",
         "discipline_rule": profile["rule"],
     }
 
@@ -268,26 +274,64 @@ def fetch_news(ticker: str) -> pd.DataFrame:
                     rows.append({"来源": source, "发布时间": published, "标题": title, "链接": link})
         except Exception:
             continue
+    if not rows:
+        return pd.DataFrame(columns=["来源", "发布时间", "标题", "链接"])
     return pd.DataFrame(rows).drop_duplicates(subset=["标题", "链接"]).head(8)
+
+
+@st.cache_data(show_spinner=False, ttl=300)
+def fetch_scheduled_scan() -> dict[str, object] | None:
+    try:
+        response = requests.get(SCHEDULED_SCAN_URL, timeout=10)
+        if response.status_code != 200:
+            return None
+        return response.json()
+    except Exception:
+        return None
+
+
+def scheduled_dataframe(payload: dict[str, object]) -> pd.DataFrame:
+    rows = payload.get("rows", []) if payload else []
+    if not rows:
+        return pd.DataFrame()
+    normalized = []
+    for row in rows:
+        item = {key: row.get(key) for key in COLUMN_LABELS if key in row}
+        news = row.get("news") or []
+        item["新闻标题数"] = len(news)
+        if news:
+            item["最新新闻"] = news[0].get("title", "")
+        normalized.append(item)
+    return pd.DataFrame(normalized).rename(columns=COLUMN_LABELS)
 
 
 st.set_page_config(page_title=SYSTEM_NAME, page_icon="K", layout="wide")
 st.title("美股监控系统 V2 云端版")
-st.caption("云端稳定展示：行情 + 双源报价复核 + VWAP/持仓纪律雷达。完整 Kronos 5分钟预测请使用本地版。")
+st.caption("云端稳定展示：定时扫描结果 + 手动行情刷新 + 双源报价复核 + VWAP/持仓纪律雷达。完整 Kronos 5分钟预测请使用本地版。")
 st.info("云端免费环境不强制加载 Kronos/torch，避免手机网页长时间卡在依赖安装；这里不改变Kronos模型功能，只做轻量雷达。")
 
 with st.sidebar:
     st.subheader("股票池")
     ticker_text = st.text_area("股票代码", ", ".join(DEFAULT_TICKERS), height=130)
     quote_limit = st.number_input("双源报价复核上限", min_value=1, max_value=100, value=int(secret("QUOTE_CHECK_LIMIT", str(DEFAULT_QUOTE_LIMIT))), step=1)
-    run = st.button("开始扫描", type="primary", use_container_width=True)
+    run = st.button("开始扫描", type="primary", width="stretch")
     st.divider()
     st.subheader("硬规则")
     for item in DISCIPLINE:
         st.caption(f"- {item}")
 
+scheduled = fetch_scheduled_scan()
+if scheduled:
+    generated = scheduled.get("generated_at", "未知")
+    st.subheader("最近一次定时扫描")
+    st.caption(f"生成时间 UTC：{generated}。数据由 GitHub Actions 定时扫描写入 master 分支。")
+    scheduled_df = scheduled_dataframe(scheduled)
+    if not scheduled_df.empty:
+        st.dataframe(scheduled_df, width="stretch", hide_index=True)
+else:
+    st.info("还没有读取到定时扫描结果。可以先点击“开始扫描”做一次即时云端扫描；GitHub Actions 首次运行后会出现定时结果。")
+
 if not run:
-    st.info("点击“开始扫描”后下载行情并运行云端雷达。")
     st.stop()
 
 started = time.perf_counter()
@@ -304,12 +348,12 @@ progress.empty()
 c1, c2, c3, c4 = st.columns(4)
 c1.metric("标的数量", len(tickers))
 c2.metric("双源一致", int((leaderboard["quote_check"] == "双源一致").sum()))
-c3.metric("模式", "云端报价雷达")
+c3.metric("模式", "即时云端报价雷达")
 c4.metric("耗时", f"{time.perf_counter() - started:.1f} 秒")
 
-st.subheader("V2 监控雷达")
+st.subheader("即时V2监控雷达")
 show_cols = ["ticker", "v2_status", "v2_action", "chain", "shares", "cost", "cost_distance_pct", "twelvedata_price", "yfinance_price", "quote_check", "quote_diff_pct", "change_pct", "price_vs_vwap_pct", "vwap_hold_15m", "status", "quote_note"]
-st.dataframe(leaderboard[show_cols].rename(columns=COLUMN_LABELS), use_container_width=True, hide_index=True)
+st.dataframe(leaderboard[show_cols].rename(columns=COLUMN_LABELS), width="stretch", hide_index=True)
 
 valid = [ticker for ticker in tickers if market_data.get(ticker) and market_data[ticker].history is not None and not market_data[ticker].history.empty]
 selected = st.selectbox("个股详情", valid if valid else tickers)
@@ -336,4 +380,4 @@ if selected and selected in market_data:
     if news.empty:
         st.info("最近新闻/公告源暂未返回可用标题。三源不完整时，结论继续降级为观察。")
     else:
-        st.dataframe(news, use_container_width=True, hide_index=True)
+        st.dataframe(news, width="stretch", hide_index=True)
