@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import os
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import quote_plus, urlencode
@@ -16,6 +17,8 @@ TICKERS = [
     "AVGO", "ANET", "ETN", "ABB", "NOK", "AMAT", "MU", "TSLA", "DLR", "RKLB",
 ]
 QUOTE_LIMIT = int(os.environ.get("QUOTE_CHECK_LIMIT", "30"))
+TWELVEDATA_BATCH_SIZE = max(1, int(os.environ.get("TWELVEDATA_BATCH_SIZE", "8")))
+TWELVEDATA_BATCH_WAIT_SECONDS = max(0, int(os.environ.get("TWELVEDATA_BATCH_WAIT_SECONDS", "90")))
 OUTPUT_PATH = Path("scan_results/latest.json")
 
 
@@ -107,7 +110,12 @@ def main() -> None:
         yf_price = None if hist.empty else float(hist["close"].iloc[-1])
         previous = None if len(hist) < 2 else float(hist["close"].iloc[-2])
         change_pct = (yf_price / previous - 1.0) * 100.0 if yf_price and previous else None
-        twelve = quote_from_twelvedata(ticker) if index < QUOTE_LIMIT else {"price": None, "status": "over_limit", "timestamp": None}
+        if index >= QUOTE_LIMIT:
+            twelve = {"price": None, "status": "over_limit", "timestamp": None}
+        else:
+            if index > 0 and index % TWELVEDATA_BATCH_SIZE == 0:
+                time.sleep(TWELVEDATA_BATCH_WAIT_SECONDS)
+            twelve = quote_from_twelvedata(ticker)
         rows.append(
             {
                 "ticker": ticker,
