@@ -3,7 +3,10 @@ from __future__ import annotations
 import os
 import time
 from dataclasses import dataclass
-from urllib.parse import urlencode
+from datetime import datetime, timezone
+from email.utils import parsedate_to_datetime
+from urllib.parse import quote_plus, urlencode
+from xml.etree import ElementTree
 
 import numpy as np
 import pandas as pd
@@ -14,6 +17,7 @@ import yfinance as yf
 SYSTEM_NAME = "美股监控系统 V2 云端版"
 INTERVAL = "5m"
 DOWNLOAD_PERIOD = "10d"
+DEFAULT_QUOTE_LIMIT = 30
 DEFAULT_TICKERS = [
     "QQQ", "NVDA", "MSFT", "UNH", "NEE", "CBRS", "INTC", "NVT", "MRVL", "VRT",
     "AVGO", "ANET", "ETN", "ABB", "NOK", "AMAT", "MU", "TSLA", "DLR", "RKLB",
@@ -46,6 +50,26 @@ DISCIPLINE = [
     "价格远离VWAP超过5%时等待回踩，不做急拉追高。",
     "QQQ跳水或NVDA转弱时，AI链试错降级。",
 ]
+COLUMN_LABELS = {
+    "ticker": "股票代码",
+    "v2_status": "V2状态",
+    "v2_action": "动作结论",
+    "chain": "产业链",
+    "shares": "持仓股数",
+    "cost": "成本",
+    "cost_distance_pct": "距成本%",
+    "twelvedata_price": "Twelve报价",
+    "yfinance_price": "yfinance报价",
+    "quote_check": "双源核对",
+    "quote_diff_pct": "价差%",
+    "change_pct": "最新5分钟涨跌%",
+    "vwap": "VWAP",
+    "price_vs_vwap_pct": "距VWAP%",
+    "vwap_hold_15m": "15分钟站上VWAP",
+    "status": "行情状态",
+    "quote_note": "报价说明",
+}
+
 
 @dataclass(frozen=True)
 class MarketRow:
@@ -110,21 +134,21 @@ def normalize_ohlcv(raw: pd.DataFrame, ticker: str) -> pd.DataFrame:
 
 @st.cache_data(show_spinner=False, ttl=600)
 def download_market_data(tickers: tuple[str, ...]) -> dict[str, MarketRow]:
-    rows: dict[str, MarketRow] = {}
     try:
         raw = yf.download(list(tickers), period=DOWNLOAD_PERIOD, interval=INTERVAL, group_by="ticker", auto_adjust=False, progress=False, threads=True)
     except Exception as exc:
         return {ticker: MarketRow(ticker, None, f"yfinance下载失败：{exc}") for ticker in tickers}
+    rows = {}
     for ticker in tickers:
         hist = normalize_ohlcv(raw, ticker)
-        msg = "行情可用" if hist is not None and not hist.empty else "无5m行情"
+        msg = "行情可用" if hist is not None and not hist.empty else "无5分钟行情"
         rows[ticker] = MarketRow(ticker, hist, msg)
     return rows
 
 
 def quote_from_yfinance(history: pd.DataFrame | None) -> tuple[float | None, str]:
     if history is None or history.empty:
-        return None, "无 yfinance 5m 数据"
+        return None, "无 yfinance 5分钟数据"
     return float(history["close"].iloc[-1]), str(history["timestamps"].iloc[-1])
 
 
@@ -136,7 +160,7 @@ def quote_from_twelvedata(ticker: str) -> tuple[float | None, str]:
         url = "https://api.twelvedata.com/quote?" + urlencode({"symbol": ticker, "apikey": token})
         payload = requests.get(url, timeout=15).json()
         if payload.get("status") == "error":
-            return None, payload.get("message", "Twelve Data error")
+            return None, payload.get("message", "Twelve Data错误")
         return float(payload.get("close") or payload.get("price")), payload.get("datetime") or "Twelve Data"
     except Exception as exc:
         return None, str(exc)
@@ -181,10 +205,8 @@ def summarize_market(ticker: str, row: MarketRow, quote_index: int, quote_limit:
     action = "可观察"
     if profile["v2_status"] == "降级观察":
         action = "降级观察"
-    elif ticker in HOLDINGS:
+    elif ticker in HOLDINGS and quote_check == "双源一致":
         action = "继续持有"
-    if quote_check != "双源一致":
-        action = "可观察" if action != "降级观察" else action
     return {
         "ticker": ticker,
         "v2_status": profile["v2_status"],
@@ -207,15 +229,57 @@ def summarize_market(ticker: str, row: MarketRow, quote_index: int, quote_limit:
     }
 
 
+def _parse_dt(value: str | None) -> str:
+    if not value:
+        return "未知"
+    try:
+        parsed = parsedate_to_datetime(value)
+        if parsed.tzinfo is None:
+            parsed = parsed.replace(tzinfo=timezone.utc)
+        return parsed.strftime("%Y-%m-%d %H:%M")
+    except Exception:
+        return "未知"
+
+
+@st.cache_data(show_spinner=False, ttl=900)
+def fetch_news(ticker: str) -> pd.DataFrame:
+    feeds = [
+        ("Yahoo Finance", f"https://feeds.finance.yahoo.com/rss/2.0/headline?s={quote_plus(ticker)}&region=US&lang=en-US"),
+        ("SEC公告", f"https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK={quote_plus(ticker)}&type=&dateb=&owner=exclude&count=20&output=atom"),
+    ]
+    rows = []
+    for source, url in feeds:
+        try:
+            text = requests.get(url, timeout=12, headers={"User-Agent": "kronos-us-scanner/1.0"}).text
+            root = ElementTree.fromstring(text)
+            for item in root.findall(".//item")[:5]:
+                title = item.findtext("title") or ""
+                link = item.findtext("link") or ""
+                published = _parse_dt(item.findtext("pubDate"))
+                if title:
+                    rows.append({"来源": source, "发布时间": published, "标题": title, "链接": link})
+            ns = {"atom": "http://www.w3.org/2005/Atom"}
+            for item in root.findall(".//atom:entry", ns)[:5]:
+                title = item.findtext("atom:title", default="", namespaces=ns)
+                link_node = item.find("atom:link", ns)
+                link = "" if link_node is None else link_node.attrib.get("href", "")
+                published = _parse_dt(item.findtext("atom:updated", default="", namespaces=ns))
+                if title:
+                    rows.append({"来源": source, "发布时间": published, "标题": title, "链接": link})
+        except Exception:
+            continue
+    return pd.DataFrame(rows).drop_duplicates(subset=["标题", "链接"]).head(8)
+
+
 st.set_page_config(page_title=SYSTEM_NAME, page_icon="K", layout="wide")
 st.title("美股监控系统 V2 云端版")
-st.caption("云端优先稳定展示：行情 + 双源报价复核 + VWAP/持仓纪律雷达。完整 Kronos 5分钟预测请使用本地版。")
-st.info("云端免费环境不强制加载 Kronos/torch，避免手机网页长时间卡在依赖安装。")
+st.caption("云端稳定展示：行情 + 双源报价复核 + VWAP/持仓纪律雷达。完整 Kronos 5分钟预测请使用本地版。")
+st.info("云端免费环境不强制加载 Kronos/torch，避免手机网页长时间卡在依赖安装；这里不改变Kronos模型功能，只做轻量雷达。")
 
 with st.sidebar:
     st.subheader("股票池")
     ticker_text = st.text_area("股票代码", ", ".join(DEFAULT_TICKERS), height=130)
-    quote_limit = st.number_input("双源报价复核上限", min_value=1, max_value=20, value=int(secret("QUOTE_CHECK_LIMIT", "8")), step=1)
+    quote_limit = st.number_input("双源报价复核上限", min_value=1, max_value=100, value=int(secret("QUOTE_CHECK_LIMIT", str(DEFAULT_QUOTE_LIMIT))), step=1)
     run = st.button("开始扫描", type="primary", use_container_width=True)
     st.divider()
     st.subheader("硬规则")
@@ -228,7 +292,7 @@ if not run:
 
 started = time.perf_counter()
 tickers = parse_tickers(ticker_text)
-progress = st.progress(0, text="正在下载 yfinance 5m 行情")
+progress = st.progress(0, text="正在下载 yfinance 5分钟行情")
 market_data = download_market_data(tuple(tickers))
 progress.progress(75, text="正在做 Twelve Data / yfinance 双源报价复核")
 rows = [summarize_market(ticker, market_data.get(ticker, MarketRow(ticker, None, "无数据")), idx, int(quote_limit)) for idx, ticker in enumerate(tickers)]
@@ -245,13 +309,21 @@ c4.metric("耗时", f"{time.perf_counter() - started:.1f} 秒")
 
 st.subheader("V2 监控雷达")
 show_cols = ["ticker", "v2_status", "v2_action", "chain", "shares", "cost", "cost_distance_pct", "twelvedata_price", "yfinance_price", "quote_check", "quote_diff_pct", "change_pct", "price_vs_vwap_pct", "vwap_hold_15m", "status", "quote_note"]
-st.dataframe(leaderboard[show_cols], use_container_width=True, hide_index=True)
+st.dataframe(leaderboard[show_cols].rename(columns=COLUMN_LABELS), use_container_width=True, hide_index=True)
 
 valid = [ticker for ticker in tickers if market_data.get(ticker) and market_data[ticker].history is not None and not market_data[ticker].history.empty]
 selected = st.selectbox("个股详情", valid if valid else tickers)
 if selected and selected in market_data:
     profile = profile_for(selected)
     st.write(f"**纪律规则**：{profile['rule']}")
+    detail = leaderboard[leaderboard["ticker"] == selected]
+    if not detail.empty:
+        row = detail.iloc[0]
+        q1, q2, q3 = st.columns(3)
+        q1.metric("yfinance最新价", "无数据" if pd.isna(row["yfinance_price"]) else f"{row['yfinance_price']:.2f}")
+        q2.metric("Twelve报价", "缺失" if pd.isna(row["twelvedata_price"]) else f"{row['twelvedata_price']:.2f}")
+        q3.metric("动作结论", row["v2_action"])
+        st.caption(f"报价说明：{row['quote_note']}")
     hist = add_vwap(market_data[selected].history)
     if not hist.empty:
         chart = hist[["timestamps", "close", "vwap"]].copy()
@@ -259,3 +331,9 @@ if selected and selected in market_data:
         chart["series"] = chart["series"].map({"close": "历史收盘", "vwap": "VWAP"})
         st.line_chart(chart, x="timestamps", y="price", color="series", height=420)
         st.bar_chart(hist[["timestamps", "volume"]], x="timestamps", y="volume", height=180)
+    st.subheader("新闻 / 公告源")
+    news = fetch_news(selected)
+    if news.empty:
+        st.info("最近新闻/公告源暂未返回可用标题。三源不完整时，结论继续降级为观察。")
+    else:
+        st.dataframe(news, use_container_width=True, hide_index=True)
