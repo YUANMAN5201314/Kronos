@@ -38,6 +38,8 @@ jobs:
         env:
           TWELVEDATA_API_KEY: ${{ secrets.TWELVEDATA_API_KEY }}
           QUOTE_CHECK_LIMIT: "30"
+          TWELVEDATA_BATCH_SIZE: "8"
+          TWELVEDATA_BATCH_WAIT_SECONDS: "90"
         run: python scripts/cloud_scheduled_scan.py
 
       - name: Commit latest scan result
