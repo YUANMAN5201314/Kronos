@@ -1,39 +1,19 @@
 from __future__ import annotations
 
 import os
-import tempfile
 import time
 from dataclasses import dataclass
-from datetime import time as dt_time
-from pathlib import Path
 from urllib.parse import urlencode
-from urllib.request import urlretrieve
 
 import numpy as np
 import pandas as pd
 import requests
 import streamlit as st
 import yfinance as yf
-from huggingface_hub import hf_hub_download
-from safetensors import safe_open
-
-from model import Kronos, KronosPredictor, KronosTokenizer
-
-os.environ.setdefault("OPENBLAS_NUM_THREADS", "1")
-os.environ.setdefault("OMP_NUM_THREADS", "1")
-os.environ.setdefault("MKL_NUM_THREADS", "1")
 
 SYSTEM_NAME = "美股监控系统 V2 云端版"
 INTERVAL = "5m"
 DOWNLOAD_PERIOD = "10d"
-LOOKBACK = 512
-PRED_LEN = 78
-MARKET_TIMEZONE = "America/New_York"
-TOKENIZER_NAME = "NeoQuasar/Kronos-Tokenizer-base"
-MODEL_NAME = "NeoQuasar/Kronos-small"
-TOKENIZER_ASSET = "Kronos-Tokenizer-base.model.safetensors"
-MODEL_ASSET = "Kronos-small.model.safetensors"
-
 DEFAULT_TICKERS = [
     "QQQ", "NVDA", "MSFT", "UNH", "NEE", "CBRS", "INTC", "NVT", "MRVL", "VRT",
     "AVGO", "ANET", "ETN", "ABB", "NOK", "AMAT", "MU", "TSLA", "DLR", "RKLB",
@@ -66,15 +46,11 @@ DISCIPLINE = [
     "价格远离VWAP超过5%时等待回踩，不做急拉追高。",
     "QQQ跳水或NVDA转弱时，AI链试错降级。",
 ]
-TOKENIZER_CONFIG = {"attn_dropout_p": 0.0, "beta": 0.05, "d_in": 6, "d_model": 256, "ff_dim": 512, "ffn_dropout_p": 0.0, "gamma": 1.1, "gamma0": 1.0, "group_size": 4, "n_dec_layers": 4, "n_enc_layers": 4, "n_heads": 4, "resid_dropout_p": 0.0, "s1_bits": 10, "s2_bits": 10, "zeta": 0.05}
-MODEL_CONFIG = {"attn_dropout_p": 0.1, "d_model": 512, "ff_dim": 1024, "ffn_dropout_p": 0.25, "learn_te": True, "n_heads": 8, "n_layers": 8, "resid_dropout_p": 0.25, "s1_bits": 10, "s2_bits": 10, "token_dropout_p": 0.1}
 
 @dataclass(frozen=True)
-class PredictionResult:
+class MarketRow:
     ticker: str
     history: pd.DataFrame | None
-    prediction: pd.DataFrame | None
-    status: str
     message: str
 
 
@@ -98,7 +74,13 @@ def profile_for(ticker: str) -> dict[str, object]:
     status = "持仓" if ticker in HOLDINGS else "观察"
     if ticker in DOWNGRADED:
         status = "降级观察"
-    return {"v2_status": status, "shares": holding.get("shares"), "cost": holding.get("cost"), "chain": chain_for(ticker), "rule": holding.get("rule", "按V2纪律观察：需市场环境、新闻催化、量价状态、VWAP和QQQ相对强弱共同确认。")}
+    return {
+        "v2_status": status,
+        "shares": holding.get("shares"),
+        "cost": holding.get("cost"),
+        "chain": chain_for(ticker),
+        "rule": holding.get("rule", "按V2纪律观察：需市场环境、新闻催化、量价状态、VWAP和QQQ相对强弱共同确认。"),
+    }
 
 
 def normalize_ohlcv(raw: pd.DataFrame, ticker: str) -> pd.DataFrame:
@@ -112,25 +94,32 @@ def normalize_ohlcv(raw: pd.DataFrame, ticker: str) -> pd.DataFrame:
             df = df.xs(ticker, axis=1, level=-1)
     df = df.rename(columns={"Open": "open", "High": "high", "Low": "low", "Close": "close", "Volume": "volume"})
     keep = [c for c in ["open", "high", "low", "close", "volume"] if c in df.columns]
+    if not keep:
+        return pd.DataFrame()
     df = df[keep].dropna(subset=["open", "high", "low", "close"])
+    if df.empty:
+        return df
     df = df.reset_index().rename(columns={"Datetime": "timestamps", "Date": "timestamps"})
     if "timestamps" not in df.columns:
         df = df.rename(columns={df.columns[0]: "timestamps"})
     df["timestamps"] = pd.to_datetime(df["timestamps"], utc=True, errors="coerce")
     df = df.dropna(subset=["timestamps"]).sort_values("timestamps")
     df["volume"] = pd.to_numeric(df.get("volume", 0), errors="coerce").fillna(0)
-    avg_price = df[["open", "high", "low", "close"]].astype(float).mean(axis=1)
-    df["amount"] = df["volume"].astype(float) * avg_price
-    return df[["timestamps", "open", "high", "low", "close", "volume", "amount"]].reset_index(drop=True)
+    return df[["timestamps", "open", "high", "low", "close", "volume"]].reset_index(drop=True)
 
 
-@st.cache_data(show_spinner=False, ttl=900)
-def download_market_data(tickers: tuple[str, ...]) -> dict[str, pd.DataFrame]:
-    data: dict[str, pd.DataFrame] = {}
-    raw = yf.download(list(tickers), period=DOWNLOAD_PERIOD, interval=INTERVAL, group_by="ticker", auto_adjust=False, progress=False, threads=True)
+@st.cache_data(show_spinner=False, ttl=600)
+def download_market_data(tickers: tuple[str, ...]) -> dict[str, MarketRow]:
+    rows: dict[str, MarketRow] = {}
+    try:
+        raw = yf.download(list(tickers), period=DOWNLOAD_PERIOD, interval=INTERVAL, group_by="ticker", auto_adjust=False, progress=False, threads=True)
+    except Exception as exc:
+        return {ticker: MarketRow(ticker, None, f"yfinance下载失败：{exc}") for ticker in tickers}
     for ticker in tickers:
-        data[ticker] = normalize_ohlcv(raw, ticker)
-    return data
+        hist = normalize_ohlcv(raw, ticker)
+        msg = "行情可用" if hist is not None and not hist.empty else "无5m行情"
+        rows[ticker] = MarketRow(ticker, hist, msg)
+    return rows
 
 
 def quote_from_yfinance(history: pd.DataFrame | None) -> tuple[float | None, str]:
@@ -165,92 +154,67 @@ def compare_quotes(twelve: float | None, yf_price: float | None) -> tuple[str, f
     return "明显分歧", diff
 
 
-def load_state_dict(path: str) -> dict:
-    state = {}
-    with safe_open(path, framework="pt", device="cpu") as tensors:
-        for key in tensors.keys():
-            state[key] = tensors.get_tensor(key)
-    return state
+def add_vwap(data: pd.DataFrame | None) -> pd.DataFrame:
+    if data is None or data.empty:
+        return pd.DataFrame()
+    df = data.copy()
+    typical = (df["high"].astype(float) + df["low"].astype(float) + df["close"].astype(float)) / 3.0
+    volume = df["volume"].astype(float).clip(lower=0)
+    cvol = volume.cumsum()
+    df["vwap"] = (typical * volume).cumsum() / cvol.where(cvol != 0)
+    return df
 
 
-def model_weight(asset: str, repo_id: str) -> str:
-    base_url = secret("KRONOS_MODEL_RELEASE_BASE_URL").rstrip("/")
-    cache = Path(tempfile.gettempdir()) / "kronos_models"
-    cache.mkdir(parents=True, exist_ok=True)
-    target = cache / asset
-    if target.exists() and target.stat().st_size > 0:
-        return str(target)
-    if base_url:
-        urlretrieve(f"{base_url}/{asset}", target)
-        return str(target)
-    return hf_hub_download(repo_id=repo_id, filename="model.safetensors", cache_dir=cache, etag_timeout=60)
-
-
-@st.cache_resource(show_spinner=False)
-def load_predictor():
-    tokenizer = KronosTokenizer(**TOKENIZER_CONFIG)
-    tokenizer.load_state_dict(load_state_dict(model_weight(TOKENIZER_ASSET, TOKENIZER_NAME)))
-    model = Kronos(**MODEL_CONFIG)
-    model.load_state_dict(load_state_dict(model_weight(MODEL_ASSET, MODEL_NAME)))
-    return KronosPredictor(model, tokenizer, device="cpu", max_context=LOOKBACK)
-
-
-def next_regular_session_timestamps(last_timestamp: pd.Timestamp, pred_len: int = PRED_LEN) -> pd.Series:
-    ts = pd.Timestamp(last_timestamp)
-    if ts.tzinfo is None:
-        ts = ts.tz_localize("UTC")
-    local_last = ts.tz_convert(MARKET_TIMEZONE)
-    next_day = (local_last + pd.Timedelta(days=1)).normalize()
-    while next_day.weekday() >= 5:
-        next_day += pd.Timedelta(days=1)
-    start = pd.Timestamp.combine(next_day.date(), dt_time(9, 30)).tz_localize(MARKET_TIMEZONE)
-    return pd.Series(pd.date_range(start=start, periods=pred_len, freq="5min").tz_convert("UTC"))
-
-
-def predict_one(ticker: str, history: pd.DataFrame) -> PredictionResult:
-    try:
-        clean = history.dropna(subset=["timestamps", "open", "high", "low", "close"]).tail(min(LOOKBACK, len(history))).reset_index(drop=True)
-        if len(clean) < 78:
-            return PredictionResult(ticker, history, None, "skipped", f"有效5m K线不足：{len(clean)}")
-        x_df = clean[["open", "high", "low", "close", "volume", "amount"]]
-        x_ts = clean["timestamps"].dt.tz_convert("UTC").dt.tz_localize(None)
-        y_ts = next_regular_session_timestamps(clean["timestamps"].iloc[-1]).dt.tz_convert("UTC").dt.tz_localize(None)
-        pred = load_predictor().predict(df=x_df, x_timestamp=x_ts, y_timestamp=y_ts, pred_len=PRED_LEN, T=1.0, top_p=0.9, sample_count=1, verbose=False)
-        pred = pred.reset_index().rename(columns={"index": "timestamps"})
-        pred["timestamps"] = pd.to_datetime(pred["timestamps"], utc=True, errors="coerce")
-        return PredictionResult(ticker, clean, pred, "predicted", "Prediction completed")
-    except Exception as exc:
-        return PredictionResult(ticker, history, None, "prediction_error", str(exc))
-
-
-def metrics_for(result: PredictionResult) -> dict[str, object]:
-    row = {"ticker": result.ticker, "status": result.status, "message": result.message, "last_close": np.nan, "forecast_close": np.nan, "forecast_return_pct": np.nan, "forecast_max_drawdown_pct": np.nan, "forecast_volatility_pct": np.nan, "risk_label": "无信号"}
-    if result.history is None or result.history.empty:
-        return row
-    last_close = float(result.history["close"].iloc[-1])
-    row["last_close"] = last_close
-    if result.prediction is None or result.prediction.empty:
-        return row
-    close = result.prediction["close"].astype(float)
-    forecast_close = float(close.iloc[-1])
-    returns = close.pct_change().dropna()
-    path = pd.concat([pd.Series([last_close]), close], ignore_index=True)
-    max_dd = float((path / path.cummax() - 1).min() * 100)
-    vol = float(returns.std(ddof=0) * np.sqrt(len(close)) * 100) if not returns.empty else 0.0
-    ret = (forecast_close / last_close - 1) * 100
-    label = "高风险" if max_dd <= -4 or vol >= 5 else "偏强" if ret >= 1.5 and max_dd > -2.5 else "偏弱" if ret <= -1.5 else "中性"
-    row.update({"forecast_close": forecast_close, "forecast_return_pct": ret, "forecast_max_drawdown_pct": max_dd, "forecast_volatility_pct": vol, "risk_label": label})
-    return row
+def summarize_market(ticker: str, row: MarketRow, quote_index: int, quote_limit: int) -> dict[str, object]:
+    profile = profile_for(ticker)
+    yf_price, yf_note = quote_from_yfinance(row.history)
+    twelve_price, twelve_note = quote_from_twelvedata(ticker) if quote_index < quote_limit else (None, "超过复核上限")
+    quote_check, quote_diff = compare_quotes(twelve_price, yf_price)
+    hist = add_vwap(row.history)
+    vwap = float(hist["vwap"].iloc[-1]) if not hist.empty and "vwap" in hist else np.nan
+    price_vs_vwap = (yf_price / vwap - 1) * 100 if yf_price and vwap == vwap and vwap else np.nan
+    last3 = hist.tail(3) if not hist.empty else pd.DataFrame()
+    vwap_hold_15m = bool(len(last3) >= 3 and (last3["close"].astype(float) >= last3["vwap"].astype(float)).all()) if not last3.empty else False
+    prev_close = float(hist["close"].iloc[-2]) if len(hist) >= 2 else np.nan
+    change_pct = (yf_price / prev_close - 1) * 100 if yf_price and prev_close == prev_close and prev_close else np.nan
+    cost = profile.get("cost")
+    action = "可观察"
+    if profile["v2_status"] == "降级观察":
+        action = "降级观察"
+    elif ticker in HOLDINGS:
+        action = "继续持有"
+    if quote_check != "双源一致":
+        action = "可观察" if action != "降级观察" else action
+    return {
+        "ticker": ticker,
+        "v2_status": profile["v2_status"],
+        "v2_action": action,
+        "chain": profile["chain"],
+        "shares": profile["shares"],
+        "cost": cost,
+        "cost_distance_pct": (yf_price / cost - 1) * 100 if yf_price and cost else np.nan,
+        "yfinance_price": yf_price,
+        "twelvedata_price": twelve_price,
+        "quote_check": quote_check,
+        "quote_diff_pct": quote_diff,
+        "change_pct": change_pct,
+        "vwap": vwap,
+        "price_vs_vwap_pct": price_vs_vwap,
+        "vwap_hold_15m": vwap_hold_15m,
+        "status": row.message,
+        "quote_note": f"yfinance={yf_note}; Twelve={twelve_note}",
+        "discipline_rule": profile["rule"],
+    }
 
 
 st.set_page_config(page_title=SYSTEM_NAME, page_icon="K", layout="wide")
 st.title("美股监控系统 V2 云端版")
-st.caption("Kronos 5分钟预测 + 持仓纪律雷达。没有三源实时确认时，所有动作默认降级为观察。")
+st.caption("云端优先稳定展示：行情 + 双源报价复核 + VWAP/持仓纪律雷达。完整 Kronos 5分钟预测请使用本地版。")
+st.info("云端免费环境不强制加载 Kronos/torch，避免手机网页长时间卡在依赖安装。")
 
 with st.sidebar:
     st.subheader("股票池")
     ticker_text = st.text_area("股票代码", ", ".join(DEFAULT_TICKERS), height=130)
-    prediction_limit = st.number_input("Kronos预测标的上限", min_value=0, max_value=3, value=int(secret("PREDICTION_TICKER_LIMIT", "1")), step=1)
     quote_limit = st.number_input("双源报价复核上限", min_value=1, max_value=20, value=int(secret("QUOTE_CHECK_LIMIT", "8")), step=1)
     run = st.button("开始扫描", type="primary", use_container_width=True)
     st.divider()
@@ -259,39 +223,15 @@ with st.sidebar:
         st.caption(f"- {item}")
 
 if not run:
-    st.info("点击“开始扫描”后下载行情并运行云端扫描。云端免费 CPU 建议每次只预测 1 个标的。")
+    st.info("点击“开始扫描”后下载行情并运行云端雷达。")
     st.stop()
 
 started = time.perf_counter()
 tickers = parse_tickers(ticker_text)
 progress = st.progress(0, text="正在下载 yfinance 5m 行情")
 market_data = download_market_data(tuple(tickers))
-progress.progress(35, text="正在运行 Kronos/报价复核")
-results = {ticker: PredictionResult(ticker, data, None, "quote_only", "仅行情") for ticker, data in market_data.items()}
-for ticker in [t for t in tickers if not market_data.get(t, pd.DataFrame()).empty][: int(prediction_limit)]:
-    results[ticker] = predict_one(ticker, market_data[ticker])
-
-rows = []
-for ticker in tickers:
-    result = results.get(ticker, PredictionResult(ticker, None, None, "empty", "无数据"))
-    row = metrics_for(result)
-    profile = profile_for(ticker)
-    yf_price, yf_time = quote_from_yfinance(result.history)
-    twelve_price, twelve_msg = quote_from_twelvedata(ticker) if len(rows) < int(quote_limit) else (None, "超过复核上限")
-    quote_check, diff = compare_quotes(twelve_price, yf_price)
-    cost = profile.get("cost")
-    row.update(profile)
-    row.update({"yfinance_price": yf_price, "twelvedata_price": twelve_price, "quote_check": quote_check, "quote_diff_pct": diff, "quote_note": f"yfinance={yf_time}; Twelve={twelve_msg}", "cost_distance_pct": (yf_price / cost - 1) * 100 if yf_price and cost else np.nan})
-    if row["status"] != "predicted":
-        row["v2_action"] = "可观察"
-    elif row["v2_status"] == "降级观察":
-        row["v2_action"] = "降级观察"
-    elif ticker in HOLDINGS:
-        row["v2_action"] = "继续持有" if row["risk_label"] != "高风险" else "止损/减仓观察"
-    else:
-        row["v2_action"] = "可观察"
-    rows.append(row)
-
+progress.progress(75, text="正在做 Twelve Data / yfinance 双源报价复核")
+rows = [summarize_market(ticker, market_data.get(ticker, MarketRow(ticker, None, "无数据")), idx, int(quote_limit)) for idx, ticker in enumerate(tickers)]
 leaderboard = pd.DataFrame(rows)
 progress.progress(100, text="完成")
 time.sleep(0.2)
@@ -299,28 +239,23 @@ progress.empty()
 
 c1, c2, c3, c4 = st.columns(4)
 c1.metric("标的数量", len(tickers))
-c2.metric("已预测", int((leaderboard["status"] == "predicted").sum()))
-c3.metric("模式", "云端Kronos" if (leaderboard["status"] == "predicted").any() else "报价复核")
+c2.metric("双源一致", int((leaderboard["quote_check"] == "双源一致").sum()))
+c3.metric("模式", "云端报价雷达")
 c4.metric("耗时", f"{time.perf_counter() - started:.1f} 秒")
 
 st.subheader("V2 监控雷达")
-show_cols = ["ticker", "v2_status", "v2_action", "chain", "shares", "cost", "cost_distance_pct", "twelvedata_price", "yfinance_price", "quote_check", "quote_diff_pct", "last_close", "forecast_return_pct", "forecast_max_drawdown_pct", "forecast_volatility_pct", "forecast_close", "risk_label", "status", "message", "quote_note"]
+show_cols = ["ticker", "v2_status", "v2_action", "chain", "shares", "cost", "cost_distance_pct", "twelvedata_price", "yfinance_price", "quote_check", "quote_diff_pct", "change_pct", "price_vs_vwap_pct", "vwap_hold_15m", "status", "quote_note"]
 st.dataframe(leaderboard[show_cols], use_container_width=True, hide_index=True)
 
-valid = [ticker for ticker in tickers if results.get(ticker) and results[ticker].history is not None and not results[ticker].history.empty]
+valid = [ticker for ticker in tickers if market_data.get(ticker) and market_data[ticker].history is not None and not market_data[ticker].history.empty]
 selected = st.selectbox("个股详情", valid if valid else tickers)
-if selected and selected in results:
-    result = results[selected]
-    st.write(f"**纪律规则**：{profile_for(selected)['rule']}")
-    hist = result.history[["timestamps", "close"]].rename(columns={"close": "price"}).copy() if result.history is not None else pd.DataFrame()
+if selected and selected in market_data:
+    profile = profile_for(selected)
+    st.write(f"**纪律规则**：{profile['rule']}")
+    hist = add_vwap(market_data[selected].history)
     if not hist.empty:
-        hist["series"] = "历史收盘"
-        chart = hist
-        if result.prediction is not None and not result.prediction.empty:
-            pred = result.prediction[["timestamps", "close"]].rename(columns={"close": "price"}).copy()
-            pred["series"] = "Kronos预测"
-            chart = pd.concat([hist, pred], ignore_index=True)
+        chart = hist[["timestamps", "close", "vwap"]].copy()
+        chart = chart.melt(id_vars="timestamps", value_vars=["close", "vwap"], var_name="series", value_name="price")
+        chart["series"] = chart["series"].map({"close": "历史收盘", "vwap": "VWAP"})
         st.line_chart(chart, x="timestamps", y="price", color="series", height=420)
-        st.bar_chart(result.history[["timestamps", "volume"]], x="timestamps", y="volume", height=180)
-        if result.prediction is None:
-            st.warning(result.message)
+        st.bar_chart(hist[["timestamps", "volume"]], x="timestamps", y="volume", height=180)
