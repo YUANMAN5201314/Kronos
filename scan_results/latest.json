@@ -1,14 +1,19 @@
 {
-  "generated_at": "2026-06-08T18:14:19.596287+00:00",
+  "generated_at": "2026-06-08T18:38:41.256989+00:00",
   "rows": [
     {
       "ticker": "QQQ",
-      "yfinance_price": 719.5549926757812,
+      "yfinance_price": 719.5,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": 0.013191790651112534,
-      "last_timestamp": "2026-06-08 18:10:00+00:00",
+      "change_pct": 0.009730943237218348,
+      "last_timestamp": "2026-06-08 18:35:00+00:00",
       "news": [
+        {
+          "source": "Yahoo Finance",
+          "title": "Stock Market Today: Nasdaq Rises In Recovery Bid; This Cancer Biotech Soars 50% (Live Coverage)",
+          "url": "https://finance.yahoo.com/m/4666804e-2154-3599-9b27-c294f072946f/stock-market-today%3A-nasdaq.html?.tsrc=rss"
+        },
         {
           "source": "Yahoo Finance",
           "title": "Is Today’s Tech Rally the Beginning of a Powerful Stock Market “Summer Melt-Up” That Will See Stocks Soar?",
@@ -18,80 +23,75 @@
           "source": "Yahoo Finance",
           "title": "Is SCHG’s 32× PE the Start of a Melt-Up or the Edge of a Cliff?",
           "url": "https://247wallst.com/investing/2026/06/08/is-schgs-32x-pe-the-start-of-a-melt-up-or-the-edge-of-a-cliff/?.tsrc=rss"
-        },
-        {
-          "source": "Yahoo Finance",
-          "title": "Exchange-Traded Funds Rise as US Equities Advance After Midday",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/exchange-traded-funds-rise-us-170915638.html?.tsrc=rss"
         }
       ],
-      "vwap": 730.602101133975,
-      "price_vs_vwap_pct": -1.5120553911694756,
+      "vwap": 730.5489475482892,
+      "price_vs_vwap_pct": -1.512417146772893,
       "vwap_hold_15m": false
     },
     {
       "ticker": "NVDA",
-      "yfinance_price": 209.24009704589844,
+      "yfinance_price": 209.1999969482422,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": -0.07635952972614435,
-      "last_timestamp": "2026-06-08 18:10:00+00:00",
+      "change_pct": -0.023896321031213752,
+      "last_timestamp": "2026-06-08 18:30:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
-          "title": "Top Midday Gainers",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/top-midday-gainers-175859143.html?.tsrc=rss"
+          "title": "Equities Mostly Rise Intraday as Tech Jumps, Markets Monitor Middle East Developments",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/equities-mostly-rise-intraday-tech-182425284.html?.tsrc=rss"
         },
         {
           "source": "Yahoo Finance",
-          "title": "Will Netflix Become a Trillion-Dollar Stock by 2030?",
-          "url": "https://www.fool.com/investing/2026/06/08/will-netflix-become-trillion-dollar-stock-by-2030/?.tsrc=rss"
+          "title": "Nasdaq and S&P 500 Bounce Back On Monday as Chip Stocks Shake Off Friday's Hangover",
+          "url": "https://www.fool.com/investing/2026/06/08/nasdaq-and-sp-500-bounce-back-on-monday-as-chip-st/?.tsrc=rss"
         },
         {
           "source": "Yahoo Finance",
-          "title": "Is Today’s Tech Rally the Beginning of a Powerful Stock Market “Summer Melt-Up” That Will See Stocks Soar?",
-          "url": "https://247wallst.com/investing/2026/06/08/is-todays-tech-rally-the-beginning-of-a-powerful-stock-market-summer-melt-up-that-will-see-stocks-soar/?.tsrc=rss"
+          "title": "Stock Market Today: Nasdaq Rises In Recovery Bid; This Cancer Biotech Soars 50% (Live Coverage)",
+          "url": "https://finance.yahoo.com/m/4666804e-2154-3599-9b27-c294f072946f/stock-market-today%3A-nasdaq.html?.tsrc=rss"
         }
       ],
-      "vwap": 215.68387982793143,
-      "price_vs_vwap_pct": -2.9876051873574117,
+      "vwap": 215.67065777053332,
+      "price_vs_vwap_pct": -3.000250886782996,
       "vwap_hold_15m": false
     },
     {
       "ticker": "MSFT",
-      "yfinance_price": 412.6400146484375,
+      "yfinance_price": 412.19000244140625,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": -0.006781388232257601,
-      "last_timestamp": "2026-06-08 18:10:00+00:00",
+      "change_pct": 0.05097127275068836,
+      "last_timestamp": "2026-06-08 18:35:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
           "title": "Is Today’s Tech Rally the Beginning of a Powerful Stock Market “Summer Melt-Up” That Will See Stocks Soar?",
           "url": "https://247wallst.com/investing/2026/06/08/is-todays-tech-rally-the-beginning-of-a-powerful-stock-market-summer-melt-up-that-will-see-stocks-soar/?.tsrc=rss"
+        },
+        {
+          "source": "Yahoo Finance",
+          "title": "Trump’s $100,000 H-1B Visa Application Fee Rejected by Judge",
+          "url": "https://finance.yahoo.com/sectors/technology/articles/trump-100-000-h-1b-174949452.html?.tsrc=rss"
         },
         {
           "source": "Yahoo Finance",
           "title": "Microsoft and Copilot just hit a jackpot in healthcare",
           "url": "https://www.thestreet.com/health/microsoft-and-copilot-just-hit-a-jackpot-in-healthcare-ai-nhs?.tsrc=rss"
-        },
-        {
-          "source": "Yahoo Finance",
-          "title": "Microsoft (MSFT) Signals Ambitions to Join the Top Tier of AI Labs",
-          "url": "https://finance.yahoo.com/sectors/technology/articles/microsoft-msft-signals-ambitions-join-171214832.html?.tsrc=rss"
         }
       ],
-      "vwap": 432.9348284968557,
-      "price_vs_vwap_pct": -4.687729540929175,
+      "vwap": 432.8812126719571,
+      "price_vs_vwap_pct": -4.779881783927387,
       "vwap_hold_15m": false
     },
     {
       "ticker": "UNH",
-      "yfinance_price": 404.57501220703125,
+      "yfinance_price": 405.3450012207031,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": -0.02100317657020012,
-      "last_timestamp": "2026-06-08 18:10:00+00:00",
+      "change_pct": 0.04566037045157234,
+      "last_timestamp": "2026-06-08 18:35:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -109,17 +109,17 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/berkshire-hathaway-signals-post-buffett-140859586.html?.tsrc=rss"
         }
       ],
-      "vwap": 388.2097363468292,
-      "price_vs_vwap_pct": 4.215575841606722,
+      "vwap": 388.2667748868715,
+      "price_vs_vwap_pct": 4.3985804190450395,
       "vwap_hold_15m": true
     },
     {
       "ticker": "NEE",
-      "yfinance_price": 84.54499816894531,
+      "yfinance_price": 84.41000366210938,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": -0.07092392365393163,
-      "last_timestamp": "2026-06-08 18:10:00+00:00",
+      "change_pct": 0.0,
+      "last_timestamp": "2026-06-08 18:35:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -137,17 +137,17 @@
           "url": "https://finance.yahoo.com/sectors/energy/articles/nextera-energy-nee-offers-potential-054200471.html?.tsrc=rss"
         }
       ],
-      "vwap": 86.10601940886606,
-      "price_vs_vwap_pct": -1.8129060553924714,
+      "vwap": 86.09877196366618,
+      "price_vs_vwap_pct": -1.9614313456984833,
       "vwap_hold_15m": false
     },
     {
       "ticker": "CBRS",
-      "yfinance_price": 249.0,
+      "yfinance_price": 247.2100067138672,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": 0.4168738626272539,
-      "last_timestamp": "2026-06-08 18:10:00+00:00",
+      "change_pct": -0.23189504256838633,
+      "last_timestamp": "2026-06-08 18:35:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -165,45 +165,45 @@
           "url": "https://finance.yahoo.com/m/8f73d55c-b241-3075-81b3-d34e1772fa6d/why-cerebras-stock-is-having.html?.tsrc=rss"
         }
       ],
-      "vwap": 234.0755903667079,
-      "price_vs_vwap_pct": 6.375893193267701,
+      "vwap": 234.14203193735636,
+      "price_vs_vwap_pct": 5.581216951259349,
       "vwap_hold_15m": true
     },
     {
       "ticker": "INTC",
-      "yfinance_price": 112.33999633789062,
+      "yfinance_price": 112.45010375976562,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": 0.19612398258388453,
-      "last_timestamp": "2026-06-08 18:10:00+00:00",
+      "change_pct": 0.04003892986712554,
+      "last_timestamp": "2026-06-08 18:35:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
-          "title": "Top Midday Gainers",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/top-midday-gainers-175859143.html?.tsrc=rss"
+          "title": "Equities Mostly Rise Intraday as Tech Jumps, Markets Monitor Middle East Developments",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/equities-mostly-rise-intraday-tech-182425284.html?.tsrc=rss"
         },
         {
           "source": "Yahoo Finance",
-          "title": "Will Netflix Become a Trillion-Dollar Stock by 2030?",
-          "url": "https://www.fool.com/investing/2026/06/08/will-netflix-become-trillion-dollar-stock-by-2030/?.tsrc=rss"
+          "title": "Nasdaq and S&P 500 Bounce Back On Monday as Chip Stocks Shake Off Friday's Hangover",
+          "url": "https://www.fool.com/investing/2026/06/08/nasdaq-and-sp-500-bounce-back-on-monday-as-chip-st/?.tsrc=rss"
         },
         {
           "source": "Yahoo Finance",
-          "title": "US Equity Indexes Mixed as Trump's Call to Halt Iran-Israel Strikes Yields Results, Ceasefire Remains at Risk",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/us-equity-indexes-mixed-trump-174301842.html?.tsrc=rss"
+          "title": "Stock Market Today: Nasdaq Rises In Recovery Bid; This Cancer Biotech Soars 50% (Live Coverage)",
+          "url": "https://finance.yahoo.com/m/4666804e-2154-3599-9b27-c294f072946f/stock-market-today%3A-nasdaq.html?.tsrc=rss"
         }
       ],
-      "vwap": 112.95575641665762,
-      "price_vs_vwap_pct": -0.5451338632939229,
+      "vwap": 112.95309973312716,
+      "price_vs_vwap_pct": -0.44531400603432525,
       "vwap_hold_15m": false
     },
     {
       "ticker": "NVT",
-      "yfinance_price": 162.88999938964844,
+      "yfinance_price": 163.39999389648438,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": -0.04602028038382944,
-      "last_timestamp": "2026-06-08 18:10:00+00:00",
+      "change_pct": -0.02754041158631315,
+      "last_timestamp": "2026-06-08 18:35:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -221,18 +221,23 @@
           "url": "https://finance.yahoo.com/sectors/energy/articles/fluence-energy-flnc-collaborate-siemens-033157245.html?.tsrc=rss"
         }
       ],
-      "vwap": 169.0236410903391,
-      "price_vs_vwap_pct": -3.6288661521688526,
+      "vwap": 168.9997773457556,
+      "price_vs_vwap_pct": -3.3134856963833004,
       "vwap_hold_15m": false
     },
     {
       "ticker": "MRVL",
-      "yfinance_price": 301.8900146484375,
+      "yfinance_price": 299.29998779296875,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": 0.017137419965984613,
-      "last_timestamp": "2026-06-08 18:10:00+00:00",
+      "change_pct": -0.04008604281042771,
+      "last_timestamp": "2026-06-08 18:35:00+00:00",
       "news": [
+        {
+          "source": "Yahoo Finance",
+          "title": "Stock Market Today: Nasdaq Rises In Recovery Bid; This Cancer Biotech Soars 50% (Live Coverage)",
+          "url": "https://finance.yahoo.com/m/4666804e-2154-3599-9b27-c294f072946f/stock-market-today%3A-nasdaq.html?.tsrc=rss"
+        },
         {
           "source": "Yahoo Finance",
           "title": "Marvell Stock Is Surging. It’s About More Than the Chip Rebound.",
@@ -242,24 +247,19 @@
           "source": "Yahoo Finance",
           "title": "Marvell is joining the S&P 500 — but history says the early bump comes with a big catch: Chart of the Day",
           "url": "https://finance.yahoo.com/markets/article/marvell-is-joining-the-sp-500--but-history-says-the-early-bump-comes-with-a-big-catch-chart-of-the-day-174839173.html?.tsrc=rss"
-        },
-        {
-          "source": "Yahoo Finance",
-          "title": "Why Applied Optoelectronics Sank 13%",
-          "url": "https://www.trefis.com/articles/601841/why-applied-optoelectronics-sank-13/2026-06-08?.tsrc=rss"
         }
       ],
-      "vwap": 266.80970380642276,
-      "price_vs_vwap_pct": 13.148064085205235,
+      "vwap": 266.91203990895133,
+      "price_vs_vwap_pct": 12.134315070637335,
       "vwap_hold_15m": true
     },
     {
       "ticker": "VRT",
-      "yfinance_price": 302.2850036621094,
+      "yfinance_price": 303.17498779296875,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": -0.051249430645972094,
-      "last_timestamp": "2026-06-08 18:10:00+00:00",
+      "change_pct": 0.028041656308364082,
+      "last_timestamp": "2026-06-08 18:35:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -277,17 +277,17 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/3-quality-compounders-target-week-090950332.html?.tsrc=rss"
         }
       ],
-      "vwap": 319.4469917796359,
-      "price_vs_vwap_pct": -5.372405613187103,
+      "vwap": 319.3951837633989,
+      "price_vs_vwap_pct": -5.078409692754082,
       "vwap_hold_15m": false
     },
     {
       "ticker": "AVGO",
-      "yfinance_price": 395.25,
+      "yfinance_price": 395.82000732421875,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": -0.011387299663623285,
-      "last_timestamp": "2026-06-08 18:10:00+00:00",
+      "change_pct": -0.012627325532454936,
+      "last_timestamp": "2026-06-08 18:35:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -305,17 +305,17 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/broadcom-expands-spring-security-anchor-171419956.html?.tsrc=rss"
         }
       ],
-      "vwap": 431.75768102872166,
-      "price_vs_vwap_pct": -8.45559503231932,
+      "vwap": 431.666723752049,
+      "price_vs_vwap_pct": -8.304257533740477,
       "vwap_hold_15m": false
     },
     {
       "ticker": "ANET",
-      "yfinance_price": 157.27130126953125,
+      "yfinance_price": 157.0449981689453,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": 0.03262946726232396,
-      "last_timestamp": "2026-06-08 18:10:00+00:00",
+      "change_pct": -0.031829817224782175,
+      "last_timestamp": "2026-06-08 18:35:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -333,17 +333,17 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/arista-networks-inc-anet-attracting-130006425.html?.tsrc=rss"
         }
       ],
-      "vwap": 162.5426877617035,
-      "price_vs_vwap_pct": -3.243078212106587,
+      "vwap": 162.5291397048289,
+      "price_vs_vwap_pct": -3.37425125478632,
       "vwap_hold_15m": false
     },
     {
       "ticker": "ETN",
-      "yfinance_price": 403.9700012207031,
+      "yfinance_price": 404.9599914550781,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": -0.016088319283502628,
-      "last_timestamp": "2026-06-08 18:10:00+00:00",
+      "change_pct": -0.011114289253633114,
+      "last_timestamp": "2026-06-08 18:35:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -361,8 +361,8 @@
           "url": "https://finance.yahoo.com/sectors/energy/articles/edison-international-wildfire-progress-policy-080615776.html?.tsrc=rss"
         }
       ],
-      "vwap": 406.0636033951732,
-      "price_vs_vwap_pct": -0.5155847894184662,
+      "vwap": 406.0576001970087,
+      "price_vs_vwap_pct": -0.2703086314350567,
       "vwap_hold_15m": false
     },
     {
@@ -379,11 +379,11 @@
     },
     {
       "ticker": "NOK",
-      "yfinance_price": 14.675000190734863,
+      "yfinance_price": 14.694999694824219,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": 0.10163783014160988,
-      "last_timestamp": "2026-06-08 18:10:00+00:00",
+      "change_pct": 0.0,
+      "last_timestamp": "2026-06-08 18:35:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -401,17 +401,17 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/harmonic-inc-hlit-good-stock-145254183.html?.tsrc=rss"
         }
       ],
-      "vwap": 15.770984114642241,
-      "price_vs_vwap_pct": -6.949369271698358,
+      "vwap": 15.76870166537334,
+      "price_vs_vwap_pct": -6.809070228697878,
       "vwap_hold_15m": false
     },
     {
       "ticker": "AMAT",
-      "yfinance_price": 494.6673889160156,
+      "yfinance_price": 493.1199951171875,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": 0.1432094649717941,
-      "last_timestamp": "2026-06-08 18:10:00+00:00",
+      "change_pct": 0.044615465580277736,
+      "last_timestamp": "2026-06-08 18:35:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -429,45 +429,45 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/computer-technology-stocks-lagging-applied-134004205.html?.tsrc=rss"
         }
       ],
-      "vwap": 470.402296681463,
-      "price_vs_vwap_pct": 5.158370272793111,
+      "vwap": 470.49191222646783,
+      "price_vs_vwap_pct": 4.809452044273987,
       "vwap_hold_15m": true
     },
     {
       "ticker": "MU",
-      "yfinance_price": 955.3049926757812,
+      "yfinance_price": 954.0,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": 0.021989642820718913,
-      "last_timestamp": "2026-06-08 18:10:00+00:00",
+      "change_pct": 0.05453911376245291,
+      "last_timestamp": "2026-06-08 18:35:00+00:00",
       "news": [
+        {
+          "source": "Yahoo Finance",
+          "title": "Equities Mostly Rise Intraday as Tech Jumps, Markets Monitor Middle East Developments",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/equities-mostly-rise-intraday-tech-182425284.html?.tsrc=rss"
+        },
+        {
+          "source": "Yahoo Finance",
+          "title": "Stock Market Today: Nasdaq Rises In Recovery Bid; This Cancer Biotech Soars 50% (Live Coverage)",
+          "url": "https://finance.yahoo.com/m/4666804e-2154-3599-9b27-c294f072946f/stock-market-today%3A-nasdaq.html?.tsrc=rss"
+        },
         {
           "source": "Yahoo Finance",
           "title": "Why Micron stock is surging today?",
           "url": "https://finance.yahoo.com/markets/stocks/articles/why-micron-stock-surging-today-174452269.html?.tsrc=rss"
-        },
-        {
-          "source": "Yahoo Finance",
-          "title": "US Equity Indexes Mixed as Trump's Call to Halt Iran-Israel Strikes Yields Results, Ceasefire Remains at Risk",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/us-equity-indexes-mixed-trump-174301842.html?.tsrc=rss"
-        },
-        {
-          "source": "Yahoo Finance",
-          "title": "After Surging 918%, Is Micron Stock Still a Buy? Here's What History Says.",
-          "url": "https://www.fool.com/investing/2026/06/08/after-surging-918-is-micron-stock-still-a-buy-here/?.tsrc=rss"
         }
       ],
-      "vwap": 957.088776439653,
-      "price_vs_vwap_pct": -0.18637599852621145,
+      "vwap": 957.0820439119708,
+      "price_vs_vwap_pct": -0.32202504806936316,
       "vwap_hold_15m": false
     },
     {
       "ticker": "TSLA",
-      "yfinance_price": 411.0199890136719,
+      "yfinance_price": 412.489990234375,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": -0.04377995817488323,
-      "last_timestamp": "2026-06-08 18:10:00+00:00",
+      "change_pct": -0.06299449197456619,
+      "last_timestamp": "2026-06-08 18:35:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -485,17 +485,17 @@
           "url": "https://finance.yahoo.com/m/baf876ac-e448-33b1-8483-659f21034fed/baron-funds-got-boost-from.html?.tsrc=rss"
         }
       ],
-      "vwap": 423.04083953206225,
-      "price_vs_vwap_pct": -2.8415342905632857,
+      "vwap": 422.9797135736783,
+      "price_vs_vwap_pct": -2.479958967931939,
       "vwap_hold_15m": false
     },
     {
       "ticker": "DLR",
-      "yfinance_price": 182.5399932861328,
+      "yfinance_price": 182.75,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": -0.04928631346061696,
-      "last_timestamp": "2026-06-08 18:10:00+00:00",
+      "change_pct": 0.021888941307657284,
+      "last_timestamp": "2026-06-08 18:35:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -513,18 +513,23 @@
           "url": "https://finance.yahoo.com/sectors/technology/articles/global-data-center-colocation-market-043000782.html?.tsrc=rss"
         }
       ],
-      "vwap": 188.49776691582122,
-      "price_vs_vwap_pct": -3.160660058296083,
+      "vwap": 188.4627183291959,
+      "price_vs_vwap_pct": -3.0312193201083137,
       "vwap_hold_15m": false
     },
     {
       "ticker": "RKLB",
-      "yfinance_price": 114.19999694824219,
+      "yfinance_price": 113.5863037109375,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": -0.1180759498941586,
-      "last_timestamp": "2026-06-08 18:10:00+00:00",
+      "change_pct": -0.06484246770831481,
+      "last_timestamp": "2026-06-08 18:35:00+00:00",
       "news": [
+        {
+          "source": "Yahoo Finance",
+          "title": "Rocket Lab CEO: Only Two Companies Have Successfully Scaled Space Launch",
+          "url": "https://247wallst.com/investing/2026/06/08/rocket-lab-ceo-only-two-companies-have-successfully-scaled-space-launch/?.tsrc=rss"
+        },
         {
           "source": "Yahoo Finance",
           "title": "Syntiant Appoints Adam Spice and David Lam to Board of Directors",
@@ -534,15 +539,10 @@
           "source": "Yahoo Finance",
           "title": "Starlink Rocket Launches Show SpaceX’s Competitive Edge",
           "url": "https://finance.yahoo.com/m/8a3b5d38-2f80-3d37-830d-ebd1006f6e09/starlink-rocket-launches-show.html?.tsrc=rss"
-        },
-        {
-          "source": "Yahoo Finance",
-          "title": "SpaceX Stock's Lockup: You've Been Warned",
-          "url": "https://www.trefis.com/articles/601883/spacex-stocks-lockup-youve-been-warned/2026-06-08?.tsrc=rss"
         }
       ],
-      "vwap": 130.55225003695824,
-      "price_vs_vwap_pct": -12.52544715551579,
+      "vwap": 130.52641045175645,
+      "price_vs_vwap_pct": -12.97829817137287,
       "vwap_hold_15m": false
     }
   ]
