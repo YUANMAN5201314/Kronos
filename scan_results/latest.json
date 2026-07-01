@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-01T01:41:12.369843+00:00",
+  "generated_at": "2026-07-01T11:00:04.185715+00:00",
   "rows": [
     {
       "ticker": "QQQ",
@@ -11,6 +11,11 @@
       "news": [
         {
           "source": "Yahoo Finance",
+          "title": "SpaceX Joins the Nasdaq-100 on July 7. What It Means for Index Fund Investors",
+          "url": "https://www.fool.com/investing/2026/06/30/spacex-joins-the-nasdaq-100-on-july-7-what-it-mean/?.tsrc=rss"
+        },
+        {
+          "source": "Yahoo Finance",
           "title": "S&P 500, Nasdaq End Higher As Chipmakers Rally, While Dow Posts Best First Half In Five Years — LUNR, AMZN, PLTR, XYZ, AVAV In Focus",
           "url": "https://stocktwits.com/news-articles/markets/equity/s-and-p-500-nasdaq-end-higher-as-chipmakers-rally-while-dow-posts-best-first-half-in-five-years-lunr-amzn-pltr-xyz-avav-in-focus/cZ1QvpOR70p?.tsrc=rss"
         },
@@ -18,11 +23,6 @@
           "source": "Yahoo Finance",
           "title": "Binance Expands bStocks Offering and Adds Microsoft, Meta and More",
           "url": "https://beincrypto.com/binance-bstocks-microsoft-meta-palantir-tokenized-stocks/?.tsrc=rss"
-        },
-        {
-          "source": "Yahoo Finance",
-          "title": "Exchange-Traded Funds Point Higher as US Equities Advance After Midday",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/exchange-traded-funds-point-higher-170817834.html?.tsrc=rss"
         }
       ],
       "vwap": 724.4830043662855,
@@ -39,18 +39,18 @@
       "news": [
         {
           "source": "Yahoo Finance",
-          "title": "Why AeroVironment Stock Skyrocketed Today",
-          "url": "https://www.fool.com/investing/2026/06/30/why-aerovironment-stock-skyrocketed-today/?.tsrc=rss"
+          "title": "Nvidia's CEO Jensen Huang Just Called Marvell Technology The Next Trillion-Dollar Company. But Is It the Better Stock to Buy?",
+          "url": "https://www.fool.com/investing/2026/07/01/nvidias-ceo-jensen-huang-just-called-marvell-techn/?.tsrc=rss"
         },
         {
           "source": "Yahoo Finance",
-          "title": "The Crowd Is Buying Sweetgreen Stock. My Honest Take Isn't as Optimistic.",
-          "url": "https://www.fool.com/investing/2026/06/30/many-sweetgreen-stock-buyers-but-not-me/?.tsrc=rss"
+          "title": "XRP Investment Potential: What $10,000 Could Grow Into Over the Next 5 Years",
+          "url": "https://www.fool.com/investing/2026/07/01/xrp-investment-potential-what-10000-could-grow-to/?.tsrc=rss"
         },
         {
           "source": "Yahoo Finance",
-          "title": "How Buying SpaceX Today Could 10X Your Investment",
-          "url": "https://www.fool.com/investing/2026/06/30/how-buying-spacex-today-could-10x-your-investment/?.tsrc=rss"
+          "title": "The Smartest S&P 500 ETF to Buy With $1,000 Right Now",
+          "url": "https://www.fool.com/investing/2026/07/01/smartest-sp-500-etf-to-buy-with-1000-now-spym/?.tsrc=rss"
         }
       ],
       "vwap": 201.54487633674208,
@@ -59,30 +59,30 @@
     },
     {
       "ticker": "MSFT",
-      "yfinance_price": 372.8399963378906,
+      "yfinance_price": null,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": 0.26354300675874853,
-      "last_timestamp": "2026-06-30 19:55:00+00:00",
+      "change_pct": null,
+      "last_timestamp": null,
       "news": [
         {
           "source": "Yahoo Finance",
-          "title": "SpaceX Is ‘Much More Of An AI Play’ Than A Space Company, Says Dan Ives — Here’s The Bull Case",
-          "url": "https://stocktwits.com/news-articles/markets/equity/spacex-more-ai-play-than-space-company-dan-ives-bull-case/cZmdul9R70A?.tsrc=rss"
+          "title": "BlackBerry (TSX:BB) Launches AtHoc Upgrade With Microsoft Teams And Entra ID",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/blackberry-tsx-bb-launches-athoc-091511708.html?.tsrc=rss"
         },
         {
           "source": "Yahoo Finance",
-          "title": "This Quantum Computing Stock Recently Went Public, and It Could Be the Buy of the Year",
-          "url": "https://www.fool.com/investing/2026/06/30/this-quantum-computing-stock-recently-went-public/?.tsrc=rss"
+          "title": "Haleon to Accelerate AI-powered Transformation With New Five-year Microsoft Collaboration",
+          "url": "https://finance.yahoo.com/technology/ai/articles/haleon-accelerate-ai-powered-transformation-090000396.html?.tsrc=rss"
         },
         {
           "source": "Yahoo Finance",
-          "title": "Microsoft to cut under 2.5% of workforce in latest layoffs, Business Insider reports",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/microsoft-cut-under-2-5-232459745.html?.tsrc=rss"
+          "title": "Microsoft to cut thousands of jobs in upcoming redundancy round",
+          "url": "https://www.verdict.co.uk/microsoft-job-cuts-jul-2026/?.tsrc=rss"
         }
       ],
-      "vwap": 371.7462679797307,
-      "price_vs_vwap_pct": 0.29421367539312904,
+      "vwap": null,
+      "price_vs_vwap_pct": null,
       "vwap_hold_15m": false
     },
     {
@@ -123,6 +123,11 @@
       "news": [
         {
           "source": "Yahoo Finance",
+          "title": "Global M&A Tops $2.5 Trillion After First-Half Deals Surge",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/global-m-tops-2-5-040001637.html?.tsrc=rss"
+        },
+        {
+          "source": "Yahoo Finance",
           "title": "FE or NEE: Which Is the Better Value Stock Right Now?",
           "url": "https://finance.yahoo.com/markets/stocks/articles/fe-nee-better-value-stock-154004577.html?.tsrc=rss"
         },
@@ -130,11 +135,6 @@
           "source": "Yahoo Finance",
           "title": "Take Home an Electrician’s Paycheck Without the High Voltage",
           "url": "https://247wallst.com/personal-finance/2026/06/30/take-home-an-electricians-paycheck-without-the-high-voltage/?.tsrc=rss"
-        },
-        {
-          "source": "Yahoo Finance",
-          "title": "Earnings Preview: What To Expect From NextEra Energy’s Report",
-          "url": "https://www.barchart.com/story/news/3053339/earnings-preview-what-to-expect-from-nextera-energys-report?.tsrc=rss"
         }
       ],
       "vwap": 87.10281361784564,
@@ -151,6 +151,11 @@
       "news": [
         {
           "source": "Yahoo Finance",
+          "title": "Cerebras (CBRS) Stock Looks Pricey After Strong Q1 And AI Deals",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/cerebras-cbrs-stock-looks-pricey-043020305.html?.tsrc=rss"
+        },
+        {
+          "source": "Yahoo Finance",
           "title": "Vimeo owner Bending Spoons prices IPO at above target range to raise $1.68 billion",
           "url": "https://finance.yahoo.com/markets/stocks/articles/vimeo-owner-bending-spoons-prices-003603860.html?.tsrc=rss"
         },
@@ -158,11 +163,6 @@
           "source": "Yahoo Finance",
           "title": "Goldman downgraded, Block upgraded: Wall Street's top analyst calls",
           "url": "https://finance.yahoo.com/markets/stocks/articles/goldman-downgraded-block-upgraded-wall-134911563.html?.tsrc=rss"
-        },
-        {
-          "source": "Yahoo Finance",
-          "title": "International Business Machines (IBM) Unveils World’s First 0.7-Nanometer Semiconductor Tech",
-          "url": "https://finance.yahoo.com/technology/articles/international-business-machines-ibm-unveils-133621024.html?.tsrc=rss"
         }
       ],
       "vwap": 198.23394593820802,
@@ -179,18 +179,18 @@
       "news": [
         {
           "source": "Yahoo Finance",
-          "title": "Tesla Ropes In Intel Veteran To Lead Elon Musk’s Ambitious Terafab Project",
-          "url": "https://stocktwits.com/news-articles/markets/equity/tesla-ropes-in-intel-veteran-to-lead-elon-musk-ambitious-terafab-project/cZmduyOR70s?.tsrc=rss"
+          "title": "Alpha & Omega Semiconductor (AOSL) Launches Multiphase Controllers for Next-Gen Intel Processors",
+          "url": "https://finance.yahoo.com/technology/articles/alpha-omega-semiconductor-aosl-launches-102154985.html?.tsrc=rss"
         },
         {
           "source": "Yahoo Finance",
-          "title": "Intel (INTC) And ASUS Unveil AI Classroom Devices For K 12 Schools",
-          "url": "https://finance.yahoo.com/technology/ai/articles/intel-intc-asus-unveil-ai-231033905.html?.tsrc=rss"
+          "title": "Jim Cramer Names 5 Top AI Spending Cycle Stocks",
+          "url": "https://beincrypto.com/jim-cramer-ai-trade-chip-suppliers-winners-stocks/?.tsrc=rss"
         },
         {
           "source": "Yahoo Finance",
-          "title": "Mizuho lifts TSMC CoWoS capacity forecasts as server CPU demand surges",
-          "url": "https://finance.yahoo.com/technology/articles/mizuho-lifts-tsmc-cowos-capacity-224423833.html?.tsrc=rss"
+          "title": "Could Lam Research Be the Next $1 Trillion Company?",
+          "url": "https://www.fool.com/investing/2026/07/01/can-lam-research-be-the-next-1-trillion-company/?.tsrc=rss"
         }
       ],
       "vwap": 130.71986856779313,
@@ -235,18 +235,18 @@
       "news": [
         {
           "source": "Yahoo Finance",
-          "title": "Dow Jones Futures: Market Extends Rebound, Bloom Energy Soars Late. SpaceX's First Entry?",
-          "url": "https://finance.yahoo.com/m/62d97296-c021-3216-8366-b2927f9c377c/dow-jones-futures%3A-market.html?.tsrc=rss"
+          "title": "Dow Jones Futures Fall, Bloom Energy Jumps; SpaceX's First Buy Point",
+          "url": "https://finance.yahoo.com/m/62d97296-c021-3216-8366-b2927f9c377c/dow-jones-futures-fall%2C-bloom.html?.tsrc=rss"
         },
         {
           "source": "Yahoo Finance",
-          "title": "Marvell Stock And The High-Stakes Forecast Behind The AI Story",
-          "url": "https://www.trefis.com/articles/604949/marvell-stock-and-the-high-stakes-forecast-behind-the-ai-story/2026-06-30?.tsrc=rss"
+          "title": "Nvidia's CEO Jensen Huang Just Called Marvell Technology The Next Trillion-Dollar Company. But Is It the Better Stock to Buy?",
+          "url": "https://www.fool.com/investing/2026/07/01/nvidias-ceo-jensen-huang-just-called-marvell-techn/?.tsrc=rss"
         },
         {
           "source": "Yahoo Finance",
-          "title": "Update: Dow Hits Fresh High as Wall Street Posts Solid Quarterly Gains",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/dow-hits-fresh-high-wall-204049573.html?.tsrc=rss"
+          "title": "AMD Nears $1 Trillion Mark Proving Nvidia’s Huang Wrong",
+          "url": "https://finance.yahoo.com/m/5ed610cc-67c6-32d8-936d-c3505fb40ded/amd-nears-%241-trillion-mark.html?.tsrc=rss"
         }
       ],
       "vwap": 293.31889637007725,
@@ -263,6 +263,11 @@
       "news": [
         {
           "source": "Yahoo Finance",
+          "title": "Here Is What to Expect From Vertiv Holdings (VRT) Following Two Major Acquisitions?",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/expect-vertiv-holdings-vrt-following-044146307.html?.tsrc=rss"
+        },
+        {
+          "source": "Yahoo Finance",
           "title": "Vertiv and 6 More Stocks to Play the ‘Physical AI’ Boom",
           "url": "https://finance.yahoo.com/m/42e9c39a-9c84-3fa4-90ca-001e7c589ec2/vertiv-and-6-more-stocks-to.html?.tsrc=rss"
         },
@@ -270,11 +275,6 @@
           "source": "Yahoo Finance",
           "title": "VRT Boosts Data Center Portfolio Through Acquisitions: What's Ahead?",
           "url": "https://finance.yahoo.com/technology/articles/vrt-boosts-data-center-portfolio-171900667.html?.tsrc=rss"
-        },
-        {
-          "source": "Yahoo Finance",
-          "title": "Here's Why AI Data Center Infrastructure Stock, Vertiv, Shot Higher Today",
-          "url": "https://www.fool.com/investing/2026/06/30/heres-why-ai-data-center-infrastructure-stock-vert/?.tsrc=rss"
         }
       ],
       "vwap": 321.39160100168465,
@@ -291,18 +291,18 @@
       "news": [
         {
           "source": "Yahoo Finance",
-          "title": "Marvell Stock And The High-Stakes Forecast Behind The AI Story",
-          "url": "https://www.trefis.com/articles/604949/marvell-stock-and-the-high-stakes-forecast-behind-the-ai-story/2026-06-30?.tsrc=rss"
+          "title": "This Semiconductor ETF’s 96% Gain Hinges on a Single $1 Trillion Question",
+          "url": "https://247wallst.com/investing/2026/07/01/this-semiconductor-etfs-96-gain-hinges-on-a-single-1-trillion-question/?.tsrc=rss"
         },
         {
           "source": "Yahoo Finance",
-          "title": "Broadcom’s Stock Has Slumped Over 20% From Its Highs. These Experts Say They Would Buy the Dip",
-          "url": "https://www.investopedia.com/broadcom-stock-has-slumped-over-20-percent-from-its-highs-these-experts-say-they-would-buy-the-dip-avgo-12009555?.tsrc=rss"
+          "title": "AMD Nears $1 Trillion Mark Proving Nvidia’s Huang Wrong",
+          "url": "https://finance.yahoo.com/m/5ed610cc-67c6-32d8-936d-c3505fb40ded/amd-nears-%241-trillion-mark.html?.tsrc=rss"
         },
         {
           "source": "Yahoo Finance",
-          "title": "Meet the Artificial Intelligence (AI) Inference Stock That Could Deliver the Biggest Gains Over the Next 3 Years (Hint: It's not Nvidia or Broadcom)",
-          "url": "https://www.fool.com/investing/2026/06/30/meet-the-artificial-intelligence-ai-inference-stoc/?.tsrc=rss"
+          "title": "This Blue-Chip Dividend Stock Just Boosted Its Payout by 200% to $0.60 Per Share",
+          "url": "https://www.barchart.com/story/news/3066051/this-blue-chip-dividend-stock-just-boosted-its-payout-by-200-to-0-60-per-share?.tsrc=rss"
         }
       ],
       "vwap": 385.69376009921825,
@@ -415,18 +415,18 @@
       "news": [
         {
           "source": "Yahoo Finance",
-          "title": "Michael Burry bets against Tesla, Nvidia in new AI bubble short positions",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/michael-burry-bets-against-tesla-211234101.html?.tsrc=rss"
+          "title": "This Semiconductor ETF’s 96% Gain Hinges on a Single $1 Trillion Question",
+          "url": "https://247wallst.com/investing/2026/07/01/this-semiconductor-etfs-96-gain-hinges-on-a-single-1-trillion-question/?.tsrc=rss"
         },
         {
           "source": "Yahoo Finance",
-          "title": "AMD, Sandisk, AeroVironment, Air Products, Strategy, and More Stocks That Explain Today’s Market",
-          "url": "https://finance.yahoo.com/m/62ce8665-bfb4-32ac-98f1-143532e3f056/amd%2C-sandisk%2C-aerovironment%2C.html?.tsrc=rss"
+          "title": "Is Applied Materials (AMAT) Expensive After Raising Its Growth Outlook?",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/applied-materials-amat-expensive-raising-043032911.html?.tsrc=rss"
         },
         {
           "source": "Yahoo Finance",
-          "title": "Lam Research Stock, Chip Gear Peers Hit Record Highs",
-          "url": "https://finance.yahoo.com/m/06f79db1-0e72-339a-950a-97fdd53e8bd7/lam-research-stock%2C-chip-gear.html?.tsrc=rss"
+          "title": "Michael Burry Is Short NVDA, AMAT, SOXX — Sees Big Korea Chip Spending As ‘Beginning Of The End’",
+          "url": "https://stocktwits.com/news-articles/markets/equity/michael-burry-is-short-nvda-amat-soxx-sees-big-korea-chip-spending-as-beginning-of-the-end/cZmdCmjR70C?.tsrc=rss"
         }
       ],
       "vwap": 636.6450713087867,
@@ -443,18 +443,18 @@
       "news": [
         {
           "source": "Yahoo Finance",
-          "title": "Micron’s stock buybacks explained: When & why the chipmaker repurchases shares",
-          "url": "https://www.thestreet.com/investing/stocks/micron-stock-buybacks?.tsrc=rss"
+          "title": "This Semiconductor ETF’s 96% Gain Hinges on a Single $1 Trillion Question",
+          "url": "https://247wallst.com/investing/2026/07/01/this-semiconductor-etfs-96-gain-hinges-on-a-single-1-trillion-question/?.tsrc=rss"
         },
         {
           "source": "Yahoo Finance",
-          "title": "Why Is IPG Photonics (IPGP) Stock Soaring Today",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/why-ipg-photonics-ipgp-stock-225101939.html?.tsrc=rss"
+          "title": "Nasdaq, S&P 500, Dow Futures Slip After Historic First-Half Rally As Investors Await Labor Data, Fed Signals: Why NKE, TSLA, NIO, MU, LUNR, CVKD Are In Focus",
+          "url": "https://stocktwits.com/news-articles/markets/equity/stock-market-today-dow-nasdaq-sp500-futures-jobs-report-nke-tsla-nio-mu-lunr-cvkd/cZm3eh3R7KL?.tsrc=rss"
         },
         {
           "source": "Yahoo Finance",
-          "title": "Why Intel (INTC) Stock Is Up Today",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/why-intel-intc-stock-today-224301845.html?.tsrc=rss"
+          "title": "Here's Why I Will Never Pay Anywhere Near $1,100 for Micron Stock",
+          "url": "https://www.fool.com/investing/2026/07/01/heres-why-i-wont-pay-1100-micron-technology-stock/?.tsrc=rss"
         }
       ],
       "vwap": 1119.079620980455,
@@ -471,18 +471,18 @@
       "news": [
         {
           "source": "Yahoo Finance",
-          "title": "Tesla Ropes In Intel Veteran To Lead Elon Musk’s Ambitious Terafab Project",
-          "url": "https://stocktwits.com/news-articles/markets/equity/tesla-ropes-in-intel-veteran-to-lead-elon-musk-ambitious-terafab-project/cZmduyOR70s?.tsrc=rss"
+          "title": "Wayve courts automakers with AI driving system that learns like humans",
+          "url": "https://finance.yahoo.com/technology/ai/articles/wayve-courts-automakers-ai-driving-100305049.html?.tsrc=rss"
         },
         {
           "source": "Yahoo Finance",
-          "title": "Rivian Automotive vs. Tesla: Which Automotive Stock Is a Better Buy in 2026?",
-          "url": "https://www.fool.com/coverage/better-buy/2026/06/30/rivian-automotive-vs-tesla-which-automotive-stock-is-a-better-buy-in-2026/?.tsrc=rss"
+          "title": "Hiltzik: Is Elon Musk really a 'trillionaire'? Only on paper",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/hiltzik-elon-musk-really-trillionaire-100000806.html?.tsrc=rss"
         },
         {
           "source": "Yahoo Finance",
-          "title": "Tesla (TSLA) Exceeds Market Returns: Some Facts to Consider",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/tesla-tsla-exceeds-market-returns-214504496.html?.tsrc=rss"
+          "title": "Nasdaq, S&P 500, Dow Futures Slip After Historic First-Half Rally As Investors Await Labor Data, Fed Signals: Why NKE, TSLA, NIO, MU, LUNR, CVKD Are In Focus",
+          "url": "https://stocktwits.com/news-articles/markets/equity/stock-market-today-dow-nasdaq-sp500-futures-jobs-report-nke-tsla-nio-mu-lunr-cvkd/cZm3eh3R7KL?.tsrc=rss"
         }
       ],
       "vwap": 395.2252476146677,
@@ -499,18 +499,18 @@
       "news": [
         {
           "source": "Yahoo Finance",
+          "title": "Digital Realty (DLR) Buys $3.5 Billion Blackstone Data Centers In Northern Virginia",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/digital-realty-dlr-buys-3-100858655.html?.tsrc=rss"
+        },
+        {
+          "source": "Yahoo Finance",
+          "title": "Is Digital Realty (DLR) Quietly Shifting From Landlord To AI Infrastructure Platform With Its Latest Move?",
+          "url": "https://finance.yahoo.com/technology/ai/articles/digital-realty-dlr-quietly-shifting-081912073.html?.tsrc=rss"
+        },
+        {
+          "source": "Yahoo Finance",
           "title": "Digital Realty Buys $3.5 Billion in Blackstone Data Centers",
           "url": "https://finance.yahoo.com/technology/articles/digital-realty-buys-3-5-203431749.html?.tsrc=rss"
-        },
-        {
-          "source": "Yahoo Finance",
-          "title": "US Equity Markets End Higher Amid Semiconductor-Led Technology Stock Gains",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/us-equity-markets-end-higher-202555996.html?.tsrc=rss"
-        },
-        {
-          "source": "Yahoo Finance",
-          "title": "Digital Realty Schedules Second Quarter 2026 Earnings Release and Conference Call",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/digital-realty-schedules-second-quarter-200500864.html?.tsrc=rss"
         }
       ],
       "vwap": 188.14416102694827,
@@ -527,6 +527,11 @@
       "news": [
         {
           "source": "Yahoo Finance",
+          "title": "RKLB Stock Slips Overnight: Rocket Lab Stands Down From 92nd Satellite Launch For Japan’s QPS",
+          "url": "https://stocktwits.com/news-articles/markets/equity/rklb-stands-down-92nd-satellite-launch-japan-qps/cZmdUHsR70x?.tsrc=rss"
+        },
+        {
+          "source": "Yahoo Finance",
           "title": "Rocket Lab (RKLB) Stock Trades Up, Here Is Why",
           "url": "https://finance.yahoo.com/markets/stocks/articles/rocket-lab-rklb-stock-trades-221901089.html?.tsrc=rss"
         },
@@ -534,11 +539,6 @@
           "source": "Yahoo Finance",
           "title": "Stock Market Today, June 30: Rocket Lab Soars on Acquisition and Major Indexes Gain",
           "url": "https://www.fool.com/coverage/stock-market-today/2026/06/30/stock-market-today-june-30-rocket-lab-soars-on-acquisition-and-major-indexes-gain/?.tsrc=rss"
-        },
-        {
-          "source": "Yahoo Finance",
-          "title": "FAA said to bar employees from buying SpaceX shares",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/faa-said-bar-employees-buying-205501828.html?.tsrc=rss"
         }
       ],
       "vwap": 96.38314377746215,
