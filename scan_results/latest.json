@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-08-31T19:18:19.337547+00:00",
+  "generated_at": "2026-08-31T19:43:04.750173+00:00",
   "rows": [
     {
       "ticker": "QQQ",
-      "yfinance_price": 714.8499755859375,
+      "yfinance_price": 715.4199829101562,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": 0.0,
-      "last_timestamp": "2026-08-31 19:15:00+00:00",
+      "change_pct": 0.01956626881067791,
+      "last_timestamp": "2026-08-31 19:35:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -25,17 +25,17 @@
           "url": "https://www.fool.com/investing/2026/08/29/if-invested-1000-qqq-20-years-ago-what-have-today/?.tsrc=rss"
         }
       ],
-      "vwap": 714.2472359345603,
-      "price_vs_vwap_pct": 0.08438809715358708,
+      "vwap": 714.2513546282383,
+      "price_vs_vwap_pct": 0.16361582996593516,
       "vwap_hold_15m": true
     },
     {
       "ticker": "NVDA",
-      "yfinance_price": 218.91070556640625,
+      "yfinance_price": 219.77999877929688,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": -0.01566683718058348,
-      "last_timestamp": "2026-08-31 19:15:00+00:00",
+      "change_pct": -0.0022771721132519573,
+      "last_timestamp": "2026-08-31 19:35:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -53,17 +53,17 @@
           "url": "https://www.fool.com/investing/2026/08/31/prediction-this-is-where-nvidia-stock-will-be-when/?.tsrc=rss"
         }
       ],
-      "vwap": 218.66506542016063,
-      "price_vs_vwap_pct": 0.11233625534725622,
+      "vwap": 218.6684557518199,
+      "price_vs_vwap_pct": 0.508323445032488,
       "vwap_hold_15m": true
     },
     {
       "ticker": "MSFT",
-      "yfinance_price": 510.99139404296875,
+      "yfinance_price": 509.6400146484375,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": -0.01929255035871824,
-      "last_timestamp": "2026-08-31 19:15:00+00:00",
+      "change_pct": -0.03726181841624543,
+      "last_timestamp": "2026-08-31 19:35:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -81,17 +81,17 @@
           "url": "https://finance.yahoo.com/technology/ai/articles/microsoft-humain-expand-strategic-collaboration-164500702.html?.tsrc=rss"
         }
       ],
-      "vwap": 493.99307618089074,
-      "price_vs_vwap_pct": 3.4410032613197084,
+      "vwap": 494.05887669315536,
+      "price_vs_vwap_pct": 3.1537006398043355,
       "vwap_hold_15m": true
     },
     {
       "ticker": "UNH",
-      "yfinance_price": 388.1650085449219,
+      "yfinance_price": 390.4150085449219,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": -0.009016914221704475,
-      "last_timestamp": "2026-08-31 19:15:00+00:00",
+      "change_pct": 0.0412031733246776,
+      "last_timestamp": "2026-08-31 19:35:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -109,17 +109,17 @@
           "url": "https://www.barchart.com/story/news/4342224/how-is-unitedhealth-group-s-stock-performance-compared-to-other-healthcare-plan-stocks?.tsrc=rss"
         }
       ],
-      "vwap": 393.67603668439597,
-      "price_vs_vwap_pct": -1.3998891540081715,
+      "vwap": 393.6168979361532,
+      "price_vs_vwap_pct": -0.8134532353716861,
       "vwap_hold_15m": false
     },
     {
       "ticker": "NEE",
-      "yfinance_price": 82.43000030517578,
+      "yfinance_price": 82.4000015258789,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": -0.006062053212796403,
-      "last_timestamp": "2026-08-31 19:15:00+00:00",
+      "change_pct": -0.048521244957233645,
+      "last_timestamp": "2026-08-31 19:35:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -137,17 +137,17 @@
           "url": "https://finance.yahoo.com/energy/articles/nextera-nee-wants-dominion-d-021442322.html?.tsrc=rss"
         }
       ],
-      "vwap": 84.11939927525232,
-      "price_vs_vwap_pct": -2.008334563289682,
+      "vwap": 84.1045039125886,
+      "price_vs_vwap_pct": -2.026648166763123,
       "vwap_hold_15m": false
     },
     {
       "ticker": "CBRS",
-      "yfinance_price": 182.22000122070312,
+      "yfinance_price": 182.13499450683594,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": -0.0027465400712634036,
-      "last_timestamp": "2026-08-31 19:15:00+00:00",
+      "change_pct": -0.11791148312747524,
+      "last_timestamp": "2026-08-31 19:35:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -165,17 +165,17 @@
           "url": "https://stocktwits.com/news-articles/markets/equity/anthropic-weighs-shareholder-sales-in-mega-ipo-breaking-from-space-x-report/cZYoWUgRJqn?.tsrc=rss"
         }
       ],
-      "vwap": 198.497011593574,
-      "price_vs_vwap_pct": -8.200128678107422,
+      "vwap": 198.44443120933923,
+      "price_vs_vwap_pct": -8.218641663619398,
       "vwap_hold_15m": false
     },
     {
       "ticker": "INTC",
-      "yfinance_price": 89.30439758300781,
+      "yfinance_price": null,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": -0.0006749030467601003,
-      "last_timestamp": "2026-08-31 19:15:00+00:00",
+      "change_pct": null,
+      "last_timestamp": null,
       "news": [
         {
           "source": "Yahoo Finance",
@@ -193,17 +193,17 @@
           "url": "https://www.fool.com/investing/2026/08/31/ceo-lip-bu-tan-just-gave-12-million-reasons-to-buy/?.tsrc=rss"
         }
       ],
-      "vwap": 90.94254570259339,
-      "price_vs_vwap_pct": -1.801300048211496,
+      "vwap": null,
+      "price_vs_vwap_pct": null,
       "vwap_hold_15m": false
     },
     {
       "ticker": "NVT",
-      "yfinance_price": 151.86500549316406,
+      "yfinance_price": 152.40499877929688,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": 0.1153688766175609,
-      "last_timestamp": "2026-08-31 19:15:00+00:00",
+      "change_pct": -0.05574576090562333,
+      "last_timestamp": "2026-08-31 19:35:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -221,17 +221,17 @@
           "url": "https://finance.yahoo.com/technology/articles/maverick-power-acquisition-boost-nvts-150200521.html?.tsrc=rss"
         }
       ],
-      "vwap": 155.23670507318494,
-      "price_vs_vwap_pct": -2.1719731673197518,
+      "vwap": 155.18121094748946,
+      "price_vs_vwap_pct": -1.7890130842786123,
       "vwap_hold_15m": false
     },
     {
       "ticker": "MRVL",
-      "yfinance_price": 210.7834930419922,
+      "yfinance_price": 211.83999633789062,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": -0.010198825709084591,
-      "last_timestamp": "2026-08-31 19:15:00+00:00",
+      "change_pct": 0.37431569519525976,
+      "last_timestamp": "2026-08-31 19:35:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -249,17 +249,17 @@
           "url": "https://247wallst.com/investing/2026/08/31/marvell-and-google-misplaced-fear-should-drive-your-purchase-decision/?.tsrc=rss"
         }
       ],
-      "vwap": 231.97341093966136,
-      "price_vs_vwap_pct": -9.134632202817805,
+      "vwap": 231.90569822607094,
+      "price_vs_vwap_pct": -8.652526454360544,
       "vwap_hold_15m": false
     },
     {
       "ticker": "VRT",
-      "yfinance_price": 259.0799865722656,
+      "yfinance_price": 256.7300109863281,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": 0.050192839971940906,
-      "last_timestamp": "2026-08-31 19:15:00+00:00",
+      "change_pct": -0.5134493526803507,
+      "last_timestamp": "2026-08-31 19:35:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -277,17 +277,17 @@
           "url": "https://finance.yahoo.com/technology/articles/data-center-power-outlook-2025-081400264.html?.tsrc=rss"
         }
       ],
-      "vwap": 262.4112933864215,
-      "price_vs_vwap_pct": -1.2694982640287011,
+      "vwap": 262.38816820592695,
+      "price_vs_vwap_pct": -2.1564071498674453,
       "vwap_hold_15m": false
     },
     {
       "ticker": "AVGO",
-      "yfinance_price": 369.92999267578125,
+      "yfinance_price": 369.7300109863281,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": -0.021625655450352443,
-      "last_timestamp": "2026-08-31 19:15:00+00:00",
+      "change_pct": 0.07172929805645545,
+      "last_timestamp": "2026-08-31 19:35:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -305,45 +305,29 @@
           "url": "https://finance.yahoo.com/technology/ai/articles/broadcom-avgo-saying-secure-enterprise-170508397.html?.tsrc=rss"
         }
       ],
-      "vwap": 365.49692572663963,
-      "price_vs_vwap_pct": 1.2128876160389934,
+      "vwap": 365.51025053568554,
+      "price_vs_vwap_pct": 1.1544848453519885,
       "vwap_hold_15m": true
     },
     {
       "ticker": "ANET",
-      "yfinance_price": 195.97500610351562,
+      "yfinance_price": 196.72000122070312,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": -0.0025459863925991755,
-      "last_timestamp": "2026-08-31 19:15:00+00:00",
-      "news": [
-        {
-          "source": "Yahoo Finance",
-          "title": "Top 10 S&P 500 Stocks of the Past Decade Share One Clear Theme",
-          "url": "https://beincrypto.com/top-10-sp-500-ai-stocks-decade/?.tsrc=rss"
-        },
-        {
-          "source": "Yahoo Finance",
-          "title": "Arista's Price Assumes The Parts Arrive On Time",
-          "url": "https://www.trefis.com/articles/613543/aristas-price-assumes-the-parts-arrive-on-time/2026-08-28?.tsrc=rss"
-        },
-        {
-          "source": "Yahoo Finance",
-          "title": "Is It Worth Investing in Arista Networks (ANET) Based on Wall Street's Bullish Views?",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/worth-investing-arista-networks-anet-133003648.html?.tsrc=rss"
-        }
-      ],
-      "vwap": 192.28085766352044,
-      "price_vs_vwap_pct": 1.9212252768602278,
+      "change_pct": 0.23949106787419794,
+      "last_timestamp": "2026-08-31 19:35:00+00:00",
+      "news": [],
+      "vwap": 192.29876377397204,
+      "price_vs_vwap_pct": 2.299150218109469,
       "vwap_hold_15m": true
     },
     {
       "ticker": "ETN",
-      "yfinance_price": 403.3399963378906,
+      "yfinance_price": 401.4200134277344,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": -0.019834685236330696,
-      "last_timestamp": "2026-08-31 19:15:00+00:00",
+      "change_pct": -0.3049802296048898,
+      "last_timestamp": "2026-08-31 19:35:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -361,8 +345,8 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/know-eaton-etn-rating-upgrade-160002681.html?.tsrc=rss"
         }
       ],
-      "vwap": 417.1538146288984,
-      "price_vs_vwap_pct": -3.311444797237817,
+      "vwap": 417.06614309119055,
+      "price_vs_vwap_pct": -3.7514744178203885,
       "vwap_hold_15m": false
     },
     {
@@ -379,39 +363,23 @@
     },
     {
       "ticker": "NOK",
-      "yfinance_price": 10.079999923706055,
+      "yfinance_price": 10.104999542236328,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": 0.03672237299217063,
-      "last_timestamp": "2026-08-31 19:15:00+00:00",
-      "news": [
-        {
-          "source": "Yahoo Finance",
-          "title": "Nokia Oyj (HLSE:NOKIA) Following Strong Q2 And AI Demand Is It A Bargain",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/nokia-oyj-hlse-nokia-following-170616273.html?.tsrc=rss"
-        },
-        {
-          "source": "Yahoo Finance",
-          "title": "Nokia Rides on Portfolio Diversification: Can it Boost Growth?",
-          "url": "https://finance.yahoo.com/technology/articles/nokia-rides-portfolio-diversification-boost-144400441.html?.tsrc=rss"
-        },
-        {
-          "source": "Yahoo Finance",
-          "title": "Mobile Virtual Network Enabler Market 2026-2030 Report Now Available — Forecasts $2.34B in Market Growth Through 2030, Profiling Ericsson, Nokia, Cisco, Tata Communications, and 16 Other Key Vendors",
-          "url": "https://finance.yahoo.com/technology/articles/mobile-virtual-network-enabler-market-081300040.html?.tsrc=rss"
-        }
-      ],
-      "vwap": 10.266438974830448,
-      "price_vs_vwap_pct": -1.81600505863303,
+      "change_pct": 0.09905175773177177,
+      "last_timestamp": "2026-08-31 19:35:00+00:00",
+      "news": [],
+      "vwap": 10.26592350517155,
+      "price_vs_vwap_pct": -1.5675546662134665,
       "vwap_hold_15m": false
     },
     {
       "ticker": "AMAT",
-      "yfinance_price": 457.4200134277344,
+      "yfinance_price": 457.8450012207031,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": 0.0043768105634223176,
-      "last_timestamp": "2026-08-31 19:15:00+00:00",
+      "change_pct": 0.11479792881927686,
+      "last_timestamp": "2026-08-31 19:35:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -429,17 +397,17 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/investors-reacting-applied-materials-amat-231303414.html?.tsrc=rss"
         }
       ],
-      "vwap": 485.472518551647,
-      "price_vs_vwap_pct": -5.778391989644261,
+      "vwap": 485.374015826322,
+      "price_vs_vwap_pct": -5.6717116508085645,
       "vwap_hold_15m": false
     },
     {
       "ticker": "MU",
-      "yfinance_price": 940.698974609375,
+      "yfinance_price": 945.47998046875,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": 0.14787206080968396,
-      "last_timestamp": "2026-08-31 19:15:00+00:00",
+      "change_pct": -0.0021044382344181933,
+      "last_timestamp": "2026-08-31 19:35:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -457,17 +425,17 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/micron-stock-flashing-intriguing-buy-182952890.html?.tsrc=rss"
         }
       ],
-      "vwap": 937.4806136554652,
-      "price_vs_vwap_pct": 0.34329893408255874,
+      "vwap": 937.5182872517128,
+      "price_vs_vwap_pct": 0.8492307110484765,
       "vwap_hold_15m": true
     },
     {
       "ticker": "TSLA",
-      "yfinance_price": 365.6499938964844,
+      "yfinance_price": 366.3572082519531,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": -0.10575853338384844,
-      "last_timestamp": "2026-08-31 19:15:00+00:00",
+      "change_pct": -0.2865451129971053,
+      "last_timestamp": "2026-08-31 19:35:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -485,17 +453,17 @@
           "url": "https://www.fool.com/investing/2026/08/31/why-tesla-stock-stepped-on-the-gas-monday-morning/?.tsrc=rss"
         }
       ],
-      "vwap": 352.0714674249873,
-      "price_vs_vwap_pct": 3.856752883387271,
+      "vwap": 352.16154872290434,
+      "price_vs_vwap_pct": 4.031007808924225,
       "vwap_hold_15m": true
     },
     {
       "ticker": "DLR",
-      "yfinance_price": 186.07000732421875,
+      "yfinance_price": 186.5800018310547,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": 0.20734565026101492,
-      "last_timestamp": "2026-08-31 19:10:00+00:00",
+      "change_pct": 0.23100077822695297,
+      "last_timestamp": "2026-08-31 19:35:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -513,17 +481,17 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/digital-realty-trust-dlr-wins-043728170.html?.tsrc=rss"
         }
       ],
-      "vwap": 190.96127836941508,
-      "price_vs_vwap_pct": -2.561394166902342,
+      "vwap": 190.89133093115595,
+      "price_vs_vwap_pct": -2.2585253500360003,
       "vwap_hold_15m": false
     },
     {
       "ticker": "RKLB",
-      "yfinance_price": 63.755001068115234,
+      "yfinance_price": 63.849998474121094,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": 0.007844812729773665,
-      "last_timestamp": "2026-08-31 19:15:00+00:00",
+      "change_pct": 0.07052451803164494,
+      "last_timestamp": "2026-08-31 19:35:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -541,8 +509,8 @@
           "url": "https://stocktwits.com/news-articles/markets/equity/rklb-strong-winds-delay-electron-insiders-sell-shares/cZYyk6BRJrs?.tsrc=rss"
         }
       ],
-      "vwap": 70.2365386653969,
-      "price_vs_vwap_pct": -9.228156342042093,
+      "vwap": 70.21440567456415,
+      "price_vs_vwap_pct": -9.064247057706876,
       "vwap_hold_15m": false
     }
   ]
