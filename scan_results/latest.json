@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-06T19:06:19.466685+00:00",
+  "generated_at": "2026-10-07T02:36:47.958530+00:00",
   "rows": [
     {
       "ticker": "QQQ",
-      "yfinance_price": 760.9199829101562,
+      "yfinance_price": 759.6099853515625,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": -0.0065689573693128445,
-      "last_timestamp": "2026-10-06 19:00:00+00:00",
+      "change_pct": 0.013163168971042083,
+      "last_timestamp": "2026-10-06 19:55:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -25,73 +25,73 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/exchange-traded-funds-equity-futures-131237791.html?.tsrc=rss"
         }
       ],
-      "vwap": 743.9002103108495,
-      "price_vs_vwap_pct": 2.287910712136343,
+      "vwap": 743.6563457379984,
+      "price_vs_vwap_pct": 2.1452973144109766,
       "vwap_hold_15m": true
     },
     {
       "ticker": "NVDA",
-      "yfinance_price": 240.3000030517578,
+      "yfinance_price": 239.1699981689453,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": -0.06030662648170981,
-      "last_timestamp": "2026-10-06 19:00:00+00:00",
+      "change_pct": -0.06309558170893848,
+      "last_timestamp": "2026-10-06 19:55:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
-          "title": "3 Growth Stocks to Buy Instead of SpaceX",
-          "url": "https://www.fool.com/investing/2026/10/06/3-growth-stocks-to-buy-instead-of-spacex/?.tsrc=rss"
+          "title": "Nvidia Hits a New All-Time High. Is the AI Stock a Buy?",
+          "url": "https://www.fool.com/investing/2026/10/06/nvidia-at-an-all-time-high-is-the-ai-stock-a-buy/?.tsrc=rss"
         },
         {
           "source": "Yahoo Finance",
-          "title": "Digger Digs the Ellisons into Another Hole",
-          "url": "https://app.moby.co/home/news/news-digger-digs-the-ellisons-into-another-hole?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss"
+          "title": "Applied Materials vs. Nvidia: What Revenue Trends Reveal About These Artificial Intelligence Companies",
+          "url": "https://www.fool.com/coverage/charts/2026/10/06/applied-materials-vs-nvidia-what-revenue-trends-reveal-about-these-artificial-intelligence-companies/?.tsrc=rss"
         },
         {
           "source": "Yahoo Finance",
-          "title": "The World’s Largest Stock Has Lagged. If Nvidia Runs, Tech and Markets Will Follow.",
-          "url": "https://finance.yahoo.com/m/6bc60917-b03e-3b32-867f-280f61f427c5/the-world%E2%80%99s-largest-stock-has.html?.tsrc=rss"
+          "title": "SpaceX  seeks to raise $40 bln to buy Nvidia chips- FT",
+          "url": "https://finance.yahoo.com/technology/ai/articles/spacex-seeks-raise-40-bln-235711720.html?.tsrc=rss"
         }
       ],
-      "vwap": 231.56627955190027,
-      "price_vs_vwap_pct": 3.7715869153134074,
+      "vwap": 230.74693205677417,
+      "price_vs_vwap_pct": 3.650348040206519,
       "vwap_hold_15m": true
     },
     {
       "ticker": "MSFT",
-      "yfinance_price": 531.0999755859375,
+      "yfinance_price": 529.489990234375,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": 0.07535373818716717,
-      "last_timestamp": "2026-10-06 19:00:00+00:00",
+      "change_pct": -0.03209283668295093,
+      "last_timestamp": "2026-10-06 19:55:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
-          "title": "Marvell stock surges after company raises 2028 revenue outlook to $20 billion",
-          "url": "https://finance.yahoo.com/markets/stocks/article/marvell-stock-surges-after-company-raises-2028-revenue-outlook-to-20-billion-155038471.html?.tsrc=rss"
+          "title": "Google Joins Microsoft, Amazon, and Meta on Constellation’s Energy Roster",
+          "url": "https://app.moby.co/home/news/news-google-joins-microsoft-amazon-meta-on-constellations-energy-roster?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss"
         },
         {
           "source": "Yahoo Finance",
-          "title": "Jim Cramer: Microsoft’s “Monster” Data Center Play Is Starting to Pay Off",
-          "url": "https://www.tikr.com/blog/jim-cramer-microsofts-monster-data-center-play-is-starting-to-pay-off?ref=yahoofinance&.tsrc=rss"
+          "title": "A $1,000 Bet on Microsoft a Decade Ago Crushed the Market by Over 3x",
+          "url": "https://247wallst.com/investing/2026/10/06/a-1000-bet-on-microsoft-a-decade-ago-crushed-the-market-by-over-3x/?.tsrc=rss"
         },
         {
           "source": "Yahoo Finance",
-          "title": "Not Microsoft. Not Google. Analysts Call This $2.7 Trillion Tech Titan the Most Undervalued AI Play.",
-          "url": "https://www.fool.com/investing/2026/10/06/not-microsoft-not-google-the-2-trillion-tech-titan/?.tsrc=rss"
+          "title": "Dear Microsoft Stock Fans, Mark Your Calendars for October 7",
+          "url": "https://www.barchart.com/story/news/4990684/dear-microsoft-stock-fans-mark-your-calendars-for-october-7?.tsrc=rss"
         }
       ],
-      "vwap": 514.0557881194178,
-      "price_vs_vwap_pct": 3.315629910300766,
+      "vwap": 514.1930964228399,
+      "price_vs_vwap_pct": 2.9749317752325366,
       "vwap_hold_15m": true
     },
     {
       "ticker": "UNH",
-      "yfinance_price": 376.3500061035156,
+      "yfinance_price": 376.1199951171875,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": 0.005319674744064251,
-      "last_timestamp": "2026-10-06 19:00:00+00:00",
+      "change_pct": 0.0438905057295047,
+      "last_timestamp": "2026-10-06 19:55:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -109,45 +109,45 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/worth-investing-unitedhealth-unh-based-123004613.html?.tsrc=rss"
         }
       ],
-      "vwap": 372.2928889086875,
-      "price_vs_vwap_pct": 1.0897648909494073,
+      "vwap": 372.27889135146194,
+      "price_vs_vwap_pct": 1.0317812411499983,
       "vwap_hold_15m": true
     },
     {
       "ticker": "NEE",
-      "yfinance_price": 77.55999755859375,
+      "yfinance_price": 77.87999725341797,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": 0.03869312494415578,
-      "last_timestamp": "2026-10-06 19:00:00+00:00",
+      "change_pct": -0.01925590897341456,
+      "last_timestamp": "2026-10-06 19:55:00+00:00",
       "news": [
+        {
+          "source": "Yahoo Finance",
+          "title": "NextEra Energy (NEE) Laps the Stock Market: Here's Why",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/nextera-energy-nee-laps-stock-204505557.html?.tsrc=rss"
+        },
+        {
+          "source": "Yahoo Finance",
+          "title": "3 Dividend Stocks Worth Buying Near Their 52-Week Lows",
+          "url": "https://www.fool.com/investing/2026/10/06/3-dividend-stocks-worth-buying-near-their-52-week/?.tsrc=rss"
+        },
         {
           "source": "Yahoo Finance",
           "title": "NextEra’s $67 Billion Dominion Acquisition Faces Political Opposition in Virginia, FT Reports",
           "url": "https://investorshub.advfn.com/market-news/article/37527/nexteras-67-billion-dominion-acquisition-faces-political-opposition-in-virginia-ft-reports?.tsrc=rss"
-        },
-        {
-          "source": "Yahoo Finance",
-          "title": "NextEra’s $67 bln Dominion deal faces political backlash in Virginia, FT reports",
-          "url": "https://finance.yahoo.com/energy/articles/nextera-67-bln-dominion-deal-055541986.html?.tsrc=rss"
-        },
-        {
-          "source": "Yahoo Finance",
-          "title": "Dominion Energy vs. NextEra Energy: One Dividend Strategy Will Crush the Other",
-          "url": "https://247wallst.com/investing/2026/10/03/dominion-energy-vs-nextera-energy-one-dividend-strategy-will-crush-the-other/?.tsrc=rss"
         }
       ],
-      "vwap": 76.30660622015094,
-      "price_vs_vwap_pct": 1.6425725117779066,
+      "vwap": 76.34941852051416,
+      "price_vs_vwap_pct": 2.004702540717518,
       "vwap_hold_15m": true
     },
     {
       "ticker": "CBRS",
-      "yfinance_price": 176.49000549316406,
+      "yfinance_price": 177.1199951171875,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": -0.008497996789602613,
-      "last_timestamp": "2026-10-06 19:00:00+00:00",
+      "change_pct": 0.0,
+      "last_timestamp": "2026-10-06 19:55:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -165,18 +165,23 @@
           "url": "https://app.moby.co/home/news/news-semianalysis-sank-cerebras-with-a-tweet-altman-saved-it?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss"
         }
       ],
-      "vwap": 185.16382999351026,
-      "price_vs_vwap_pct": -4.684405426616101,
+      "vwap": 185.01299828922205,
+      "price_vs_vwap_pct": -4.266188454335406,
       "vwap_hold_15m": false
     },
     {
       "ticker": "INTC",
-      "yfinance_price": 114.33999633789062,
+      "yfinance_price": 112.45999908447266,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": -0.2051063640505446,
-      "last_timestamp": "2026-10-06 19:00:00+00:00",
+      "change_pct": -0.5834544254635032,
+      "last_timestamp": "2026-10-06 19:55:00+00:00",
       "news": [
+        {
+          "source": "Yahoo Finance",
+          "title": "Intel to Report Third-Quarter 2026 Financial Results",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/intel-report-third-quarter-2026-200100414.html?.tsrc=rss"
+        },
         {
           "source": "Yahoo Finance",
           "title": "Embedded Systems - Global Strategic Business Report: Capture $71 Billion in Growth Through 2032 as Intel, Qualcomm, NXP Semiconductors, and STMicroelectronics Accelerate AI and IoT Disruption",
@@ -186,24 +191,19 @@
           "source": "Yahoo Finance",
           "title": "AMD Spikes 4% as Citi Lifts Target to $800 and Stifel Goes to $700; NVIDIA Ticks Up, Intel Slips",
           "url": "https://247wallst.com/investing/2026/10/06/amd-spikes-4-as-citi-lifts-target-to-800-and-stifel-goes-to-700-nvidia-ticks-up-intel-slips/?.tsrc=rss"
-        },
-        {
-          "source": "Yahoo Finance",
-          "title": "Applied Materials and Intel Collaborate to Accelerate Chipmaking Innovations for AI-Driven Computing",
-          "url": "https://finance.yahoo.com/technology/ai/articles/applied-materials-intel-collaborate-accelerate-130000109.html?.tsrc=rss"
         }
       ],
-      "vwap": 119.81344292742197,
-      "price_vs_vwap_pct": -4.5683075753418905,
+      "vwap": 119.68468644364422,
+      "price_vs_vwap_pct": -6.036434212135777,
       "vwap_hold_15m": false
     },
     {
       "ticker": "NVT",
-      "yfinance_price": 173.94500732421875,
+      "yfinance_price": 173.77000427246094,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": 0.0834316857967865,
-      "last_timestamp": "2026-10-06 19:00:00+00:00",
+      "change_pct": 0.19315981121630355,
+      "last_timestamp": "2026-10-06 19:55:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -221,45 +221,45 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/nvent-electric-nvt-stock-looks-090652732.html?.tsrc=rss"
         }
       ],
-      "vwap": 164.966430479805,
-      "price_vs_vwap_pct": 5.442669043816695,
+      "vwap": 165.30579150764046,
+      "price_vs_vwap_pct": 5.120336491313582,
       "vwap_hold_15m": true
     },
     {
       "ticker": "MRVL",
-      "yfinance_price": 288.5,
+      "yfinance_price": 287.19000244140625,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": 0.10582857718910432,
-      "last_timestamp": "2026-10-06 19:00:00+00:00",
+      "change_pct": 0.5215226358811886,
+      "last_timestamp": "2026-10-06 19:55:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
-          "title": "Marvell stock surges after company raises 2028 revenue outlook to $20 billion",
-          "url": "https://finance.yahoo.com/markets/stocks/article/marvell-stock-surges-after-company-raises-2028-revenue-outlook-to-20-billion-155038471.html?.tsrc=rss"
+          "title": "Marvell rides the AI boom, targets $90B in revenue by fiscal 2031",
+          "url": "https://finance.yahoo.com/video/marvell-rides-the-ai-boom-targets-90b-in-revenue-by-fiscal-2031-192654470.html?.tsrc=rss"
         },
         {
           "source": "Yahoo Finance",
-          "title": "Sector Update: Tech Stocks Gain Tuesday Afternoon",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/sector-tech-stocks-gain-tuesday-173711062.html?.tsrc=rss"
+          "title": "S&P 500 And Nasdaq 100 Soar To Record Highs Amid Rising Bets Of Strong Quarterly Earnings — CEG, LCID, SPCX, MRVL In Focus",
+          "url": "https://stocktwits.com/news-articles/markets/equity/s-and-p-500-and-nasdaq-100-soar-to-record-highs-amid-rising-bets-of-strong-quarterly-earnings-ceg-lcid-spcx-mrvl-in-focus/cZDtSxvRBlj?.tsrc=rss"
         },
         {
           "source": "Yahoo Finance",
-          "title": "Marvell, Nvidia, AMD, Constellation Energy, Seagate, and More Stocks That Explain Today’s Market",
-          "url": "https://finance.yahoo.com/m/4dd12e57-7617-3012-b143-0d797d9fa46f/marvell%2C-nvidia%2C-amd%2C.html?.tsrc=rss"
+          "title": "Marvell Technology (MRVL) Stock Trades Up, Here Is Why",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/marvell-technology-mrvl-stock-trades-215234986.html?.tsrc=rss"
         }
       ],
-      "vwap": 270.85326008288206,
-      "price_vs_vwap_pct": 6.515239990730759,
+      "vwap": 271.40279989838245,
+      "price_vs_vwap_pct": 5.816890079591941,
       "vwap_hold_15m": true
     },
     {
       "ticker": "VRT",
-      "yfinance_price": 253.19000244140625,
+      "yfinance_price": 253.2100067138672,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": -0.02495601367025202,
-      "last_timestamp": "2026-10-06 19:00:00+00:00",
+      "change_pct": 0.37660042326113086,
+      "last_timestamp": "2026-10-06 19:55:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -277,18 +277,23 @@
           "url": "https://247wallst.com/investing/2026/10/01/wall-street-backs-coherent-rocket-lab-and-vertiv/?.tsrc=rss"
         }
       ],
-      "vwap": 249.01858365971336,
-      "price_vs_vwap_pct": 1.6751435657481606,
+      "vwap": 249.09609376355553,
+      "price_vs_vwap_pct": 1.6515365167534934,
       "vwap_hold_15m": true
     },
     {
       "ticker": "AVGO",
-      "yfinance_price": 378.610107421875,
+      "yfinance_price": 375.9100036621094,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": -0.10287403116754357,
-      "last_timestamp": "2026-10-06 19:00:00+00:00",
+      "change_pct": 0.08520123734361285,
+      "last_timestamp": "2026-10-06 19:55:00+00:00",
       "news": [
+        {
+          "source": "Yahoo Finance",
+          "title": "Markets climb as a handful of tech stocks power the rally",
+          "url": "https://finance.yahoo.com/video/markets-climb-handful-tech-stocks-201800223.html?.tsrc=rss"
+        },
         {
           "source": "Yahoo Finance",
           "title": "Marvell stock surges after company raises 2028 revenue outlook to $20 billion",
@@ -298,25 +303,25 @@
           "source": "Yahoo Finance",
           "title": "Top 3 Cash Flow Stocks To Watch In October 2026",
           "url": "https://finance.yahoo.com/markets/stocks/articles/top-3-cash-flow-stocks-170921778.html?.tsrc=rss"
-        },
-        {
-          "source": "Yahoo Finance",
-          "title": "Here’s Why I’m Buying Broadcom Even As Concerns About Circular Financing With Anthropic Mount",
-          "url": "https://247wallst.com/investing/2026/10/06/heres-why-im-buying-broadcom-even-as-concerns-about-circular-financing-with-anthropic-mount/?.tsrc=rss"
         }
       ],
-      "vwap": 356.5616915408923,
-      "price_vs_vwap_pct": 6.1836188250341095,
+      "vwap": 357.01797370187506,
+      "price_vs_vwap_pct": 5.291618728420078,
       "vwap_hold_15m": true
     },
     {
       "ticker": "ANET",
-      "yfinance_price": 214.73500061035156,
+      "yfinance_price": 215.36000061035156,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": -0.030261843800150068,
-      "last_timestamp": "2026-10-06 19:00:00+00:00",
+      "change_pct": -0.12516699370153095,
+      "last_timestamp": "2026-10-06 19:55:00+00:00",
       "news": [
+        {
+          "source": "Yahoo Finance",
+          "title": "Dow Jones Futures: S&P 500 Hits High As Astera, GE Vernova, Arista Lead Buys, But These Stocks Tumble",
+          "url": "https://finance.yahoo.com/m/0af6d9e8-1837-3d24-bf26-336d6cf15361/dow-jones-futures%3A-s%26p-500.html?.tsrc=rss"
+        },
         {
           "source": "Yahoo Finance",
           "title": "Arista Networks Advances 4% While Ciena Soars 11% on AI Networking Demand; Cisco Rises 3%",
@@ -326,24 +331,19 @@
           "source": "Yahoo Finance",
           "title": "Wall Street Analysts See Arista Networks (ANET) as a Buy: Should You Invest?",
           "url": "https://finance.yahoo.com/markets/stocks/articles/wall-street-analysts-see-arista-123004222.html?.tsrc=rss"
-        },
-        {
-          "source": "Yahoo Finance",
-          "title": "Arista Networks, Inc. (ANET) is Attracting Investor Attention: Here is What You Should Know",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/arista-networks-inc-anet-attracting-120005133.html?.tsrc=rss"
         }
       ],
-      "vwap": 206.2663729803945,
-      "price_vs_vwap_pct": 4.105675349593696,
+      "vwap": 206.61667411247194,
+      "price_vs_vwap_pct": 4.231665491392134,
       "vwap_hold_15m": true
     },
     {
       "ticker": "ETN",
-      "yfinance_price": 444.1600036621094,
+      "yfinance_price": 445.0899963378906,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": -0.08997523364248083,
-      "last_timestamp": "2026-10-06 19:00:00+00:00",
+      "change_pct": 0.1406184975531577,
+      "last_timestamp": "2026-10-06 19:55:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -361,8 +361,8 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/eaton-etn-expands-austria-plant-041557307.html?.tsrc=rss"
         }
       ],
-      "vwap": 436.03217258244206,
-      "price_vs_vwap_pct": 1.864043891882905,
+      "vwap": 436.23198394613047,
+      "price_vs_vwap_pct": 2.030573804247693,
       "vwap_hold_15m": true
     },
     {
@@ -379,11 +379,11 @@
     },
     {
       "ticker": "NOK",
-      "yfinance_price": 10.875,
+      "yfinance_price": 10.979900360107422,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": -0.0918716460409641,
-      "last_timestamp": "2026-10-06 19:00:00+00:00",
+      "change_pct": 0.6997745960839019,
+      "last_timestamp": "2026-10-06 19:55:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -401,18 +401,23 @@
           "url": "https://stocktwits.com/news-articles/markets/equity/nok-stock-nokia-iceye-leo-defense-network-spacex-starlink/cZD0R1gRBiK?.tsrc=rss"
         }
       ],
-      "vwap": 10.408051893127565,
-      "price_vs_vwap_pct": 4.486412170761378,
+      "vwap": 10.421203553354408,
+      "price_vs_vwap_pct": 5.3611543416516305,
       "vwap_hold_15m": true
     },
     {
       "ticker": "AMAT",
-      "yfinance_price": 530.0250244140625,
+      "yfinance_price": 530.25,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": -0.1958287634400313,
-      "last_timestamp": "2026-10-06 19:00:00+00:00",
+      "change_pct": 0.23819160832641018,
+      "last_timestamp": "2026-10-06 19:55:00+00:00",
       "news": [
+        {
+          "source": "Yahoo Finance",
+          "title": "Applied Materials vs. Nvidia: What Revenue Trends Reveal About These Artificial Intelligence Companies",
+          "url": "https://www.fool.com/coverage/charts/2026/10/06/applied-materials-vs-nvidia-what-revenue-trends-reveal-about-these-artificial-intelligence-companies/?.tsrc=rss"
+        },
         {
           "source": "Yahoo Finance",
           "title": "What Would You Have Needed To Notice In Applied Materials Stock?",
@@ -422,52 +427,47 @@
           "source": "Yahoo Finance",
           "title": "Applied Materials vs. Nvidia: Which Chip Stock Is a Better Buy in 2026?",
           "url": "https://www.fool.com/coverage/better-buy/2026/10/06/applied-materials-vs-nvidia-which-chip-stock-better-buy-2026/?.tsrc=rss"
-        },
-        {
-          "source": "Yahoo Finance",
-          "title": "Should You Buy, Sell or Hold AMAT Stock at a P/S Valuation of 9.59X?",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/buy-sell-hold-amat-stock-143800084.html?.tsrc=rss"
         }
       ],
-      "vwap": 508.057346505311,
-      "price_vs_vwap_pct": 4.323857938450626,
+      "vwap": 508.48290127775977,
+      "price_vs_vwap_pct": 4.2807926613740666,
       "vwap_hold_15m": true
     },
     {
       "ticker": "MU",
-      "yfinance_price": 1055.10009765625,
+      "yfinance_price": 1045.56005859375,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": -0.2326072091613396,
-      "last_timestamp": "2026-10-06 19:00:00+00:00",
+      "change_pct": -0.365850580206617,
+      "last_timestamp": "2026-10-06 19:55:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
           "title": "Citi raises AMD price target — and it's because of Meta Muse",
-          "url": "https://finance.yahoo.com/video/citi-raises-amd-price-target-152026862.html?.tsrc=rss"
+          "url": "https://finance.yahoo.com/video/citi-raises-amd-price-target--and-its-because-of-meta-muse-152026862.html?.tsrc=rss"
+        },
+        {
+          "source": "Yahoo Finance",
+          "title": "NLST Stock Jumps 18% After Micron’s $600M License Deal — Retail Now Awaits SK Hynix",
+          "url": "https://stocktwits.com/news-articles/markets/equity/nlst-stock-jumps-18-after-micron-s-600-m-license-deal-retail-now-awaits-sk-hynix/cZDtKjSRBlS?.tsrc=rss"
         },
         {
           "source": "Yahoo Finance",
           "title": "5 Surging ETFs Up More than 50% in 2026",
           "url": "https://www.tikr.com/blog/surging-etfs-up-in-2026?ref=yahoofinance&.tsrc=rss"
-        },
-        {
-          "source": "Yahoo Finance",
-          "title": "Micron Stock Drops. Why It Needs a Memory Price Test.",
-          "url": "https://finance.yahoo.com/m/2a003763-34ba-3048-b95d-81b76986c0a0/micron-stock-drops.-why-it.html?.tsrc=rss"
         }
       ],
-      "vwap": 1069.7176838885846,
-      "price_vs_vwap_pct": -1.3664900985087436,
+      "vwap": 1069.4021699923178,
+      "price_vs_vwap_pct": -2.2294803645983907,
       "vwap_hold_15m": false
     },
     {
       "ticker": "TSLA",
-      "yfinance_price": 380.2200012207031,
+      "yfinance_price": 380.67498779296875,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": -0.01593768093902659,
-      "last_timestamp": "2026-10-06 19:00:00+00:00",
+      "change_pct": 0.007881038805890306,
+      "last_timestamp": "2026-10-06 19:55:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -485,46 +485,51 @@
           "url": "https://finance.yahoo.com/technology/articles/tesla-vs-waymo-face-off-141900186.html?.tsrc=rss"
         }
       ],
-      "vwap": 368.09401094777706,
-      "price_vs_vwap_pct": 3.294264484690679,
+      "vwap": 367.9152525041626,
+      "price_vs_vwap_pct": 3.4681180521761057,
       "vwap_hold_15m": true
     },
     {
       "ticker": "DLR",
-      "yfinance_price": 184.5500030517578,
+      "yfinance_price": 184.7899932861328,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": 0.05964032145711062,
-      "last_timestamp": "2026-10-06 19:00:00+00:00",
+      "change_pct": 0.20334572223104086,
+      "last_timestamp": "2026-10-06 19:55:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
-          "title": "What You Need to Know Ahead of Digital Realty Trust’s Earnings Release",
-          "url": "https://www.barchart.com/story/news/4959309/what-you-need-to-know-ahead-of-digital-realty-trusts-earnings-release?.tsrc=rss"
+          "title": "Digital Realty Commences Construction of KIX15 Data Center, Expanding AI Infrastructure in Japan",
+          "url": "https://finance.yahoo.com/technology/ai/articles/digital-realty-commences-construction-kix15-020000251.html?.tsrc=rss"
         },
         {
           "source": "Yahoo Finance",
-          "title": "Is Blackfuel’s AI Bet On ServiceFabric Reshaping The Investment Case For Digital Realty Trust (DLR)?",
-          "url": "https://finance.yahoo.com/technology/ai/articles/blackfuel-ai-bet-servicefabric-reshaping-110633757.html?.tsrc=rss"
+          "title": "Can Digital Realty Trust (DLR) Justify Its Valuation After The Blackfuel AI Deal?",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/digital-realty-trust-dlr-justify-010901600.html?.tsrc=rss"
         },
         {
           "source": "Yahoo Finance",
-          "title": "Digital Realty Schedules Third Quarter 2026 Earnings Release and Conference Call",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/digital-realty-schedules-third-quarter-200500729.html?.tsrc=rss"
+          "title": "Digital Realty Announces Pricing of €1 Billion of Guaranteed Notes Due 2036",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/digital-realty-announces-pricing-1-230500979.html?.tsrc=rss"
         }
       ],
-      "vwap": 178.85542844864932,
-      "price_vs_vwap_pct": 3.1838981083783136,
+      "vwap": 179.02508126718317,
+      "price_vs_vwap_pct": 3.220170033240133,
       "vwap_hold_15m": true
     },
     {
       "ticker": "RKLB",
-      "yfinance_price": 75.08000183105469,
+      "yfinance_price": 75.05999755859375,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": -0.11972374628552718,
-      "last_timestamp": "2026-10-06 19:00:00+00:00",
+      "change_pct": 0.3945672057159788,
+      "last_timestamp": "2026-10-06 19:55:00+00:00",
       "news": [
+        {
+          "source": "Yahoo Finance",
+          "title": "Rocket Lab, MYR Group, Ameresco, Comfort Systems, and Powell Shares Skyrocket, What You Need To Know",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/rocket-lab-myr-group-ameresco-205634892.html?.tsrc=rss"
+        },
         {
           "source": "Yahoo Finance",
           "title": "Rocket Lab Just Gained 17% in a Month: Is It Too Late to Buy RKLB Stock Now?",
@@ -534,15 +539,10 @@
           "source": "Yahoo Finance",
           "title": "Rocket Lab Stock Pops Tuesday: What's Going On?",
           "url": "https://finance.yahoo.com/markets/stocks/articles/rocket-lab-stock-pops-tuesday-145752381.html?.tsrc=rss"
-        },
-        {
-          "source": "Yahoo Finance",
-          "title": "Rocket Lab Gains 13.6% in a Month: Should Investors Buy the Stock Now?",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/rocket-lab-gains-13-6-133900296.html?.tsrc=rss"
         }
       ],
-      "vwap": 72.85734912674495,
-      "price_vs_vwap_pct": 3.0506911532605097,
+      "vwap": 72.88405180090673,
+      "price_vs_vwap_pct": 2.9854895603649068,
       "vwap_hold_15m": true
     }
   ]
