@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-09T18:35:03.437620+00:00",
+  "generated_at": "2026-10-09T19:02:29.641824+00:00",
   "rows": [
     {
       "ticker": "QQQ",
-      "yfinance_price": 751.1300048828125,
+      "yfinance_price": 751.3150024414062,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": -0.01730491189768646,
-      "last_timestamp": "2026-10-09 18:30:00+00:00",
+      "change_pct": 0.0019984891097335478,
+      "last_timestamp": "2026-10-09 18:55:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -25,45 +25,45 @@
           "url": "https://stocktwits.com/news-articles/markets/equity/stocktwits-passport-portfolio-wall-street-outpaces-asia-as-ai-trade-wobbles-and-bond-yields-climb/cZD60nORBVY?.tsrc=rss"
         }
       ],
-      "vwap": 747.9498957105515,
-      "price_vs_vwap_pct": 0.42517676524842507,
+      "vwap": 747.1051083793941,
+      "price_vs_vwap_pct": 0.5634942145080757,
       "vwap_hold_15m": true
     },
     {
       "ticker": "NVDA",
-      "yfinance_price": 229.73500061035156,
+      "yfinance_price": 229.7100067138672,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": -0.0013947813789827457,
-      "last_timestamp": "2026-10-09 18:30:00+00:00",
+      "change_pct": 0.09669720178524521,
+      "last_timestamp": "2026-10-09 18:55:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
-          "title": "Elon Musk, Jensen Huang, and other tech leaders receive White House National Medals",
-          "url": "https://finance.yahoo.com/video/elon-musk-jensen-huang-and-other-tech-leaders-receive-white-house-national-medals-182115599.html?.tsrc=rss"
+          "title": "Elon Musk, Michael Dell, Jensen Huang, and other tech leaders receive White House National Medals",
+          "url": "https://finance.yahoo.com/video/elon-musk-michael-dell-jensen-huang-and-other-tech-leaders-receive-white-house-national-medals-184725677.html?.tsrc=rss"
+        },
+        {
+          "source": "Yahoo Finance",
+          "title": "Management Raised the Bar For NVIDIA Stock; Does The Chart Agree?",
+          "url": "https://www.trefis.com/articles/618174/management-raised-the-bar-for-nvidia-stock-does-the-chart-agree/2026-10-09?.tsrc=rss"
         },
         {
           "source": "Yahoo Finance",
           "title": "Nvidia-Backed Fermus Wanted $30 Billion Valuation on Just $51 Million in Revenue",
           "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62281613/firmus-ipo-30-billion-valuation-revenue?utm_source=yahooFinance&utm_campaign=partner_feed&utm_medium=referral&.tsrc=rss"
-        },
-        {
-          "source": "Yahoo Finance",
-          "title": "Forget the Selloff: “$2 Trillion” is the Only Number that Matters for NVIDIA",
-          "url": "https://www.tikr.com/blog/forget-the-selloff-2-trillion-is-the-only-number-that-matters-for-nvidia?ref=yahoofinance&.tsrc=rss"
         }
       ],
-      "vwap": 232.4571580464625,
-      "price_vs_vwap_pct": -1.1710361853287554,
+      "vwap": 233.73993499726996,
+      "price_vs_vwap_pct": -1.7241077282963424,
       "vwap_hold_15m": false
     },
     {
       "ticker": "MSFT",
-      "yfinance_price": 534.719970703125,
+      "yfinance_price": 536.5700073242188,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": 0.01495511979965336,
-      "last_timestamp": "2026-10-09 18:30:00+00:00",
+      "change_pct": 0.017714104591259883,
+      "last_timestamp": "2026-10-09 18:55:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -72,8 +72,8 @@
         },
         {
           "source": "Yahoo Finance",
-          "title": "Elon Musk, Jensen Huang, and other tech leaders receive White House National Medals",
-          "url": "https://finance.yahoo.com/video/elon-musk-jensen-huang-and-other-tech-leaders-receive-white-house-national-medals-182115599.html?.tsrc=rss"
+          "title": "Elon Musk, Michael Dell, Jensen Huang, and other tech leaders receive White House National Medals",
+          "url": "https://finance.yahoo.com/video/elon-musk-michael-dell-jensen-huang-and-other-tech-leaders-receive-white-house-national-medals-184725677.html?.tsrc=rss"
         },
         {
           "source": "Yahoo Finance",
@@ -81,17 +81,17 @@
           "url": "https://finance.yahoo.com/markets/article/the-ai-saaspocalypse-was-supposed-to-crush-software-stocks--but-this-happened-instead-163021702.html?.tsrc=rss"
         }
       ],
-      "vwap": 521.4577578007041,
-      "price_vs_vwap_pct": 2.543295732784845,
+      "vwap": 521.0579365305439,
+      "price_vs_vwap_pct": 2.9770337818787906,
       "vwap_hold_15m": true
     },
     {
       "ticker": "UNH",
-      "yfinance_price": 380.92999267578125,
+      "yfinance_price": 382.6300048828125,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": 0.014438510214964673,
-      "last_timestamp": "2026-10-09 18:30:00+00:00",
+      "change_pct": 0.2095221273029857,
+      "last_timestamp": "2026-10-09 18:55:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -109,17 +109,17 @@
           "url": "https://247wallst.com/investing/2026/10/09/seniors-face-an-18-drop-in-highly-rated-medicare-advantage-plans-but-quality-might-not-be-the-cause/?.tsrc=rss"
         }
       ],
-      "vwap": 374.03075115517265,
-      "price_vs_vwap_pct": 1.84456531964301,
+      "vwap": 373.91575041482776,
+      "price_vs_vwap_pct": 2.330539555586264,
       "vwap_hold_15m": true
     },
     {
       "ticker": "NEE",
-      "yfinance_price": 77.3949966430664,
+      "yfinance_price": 77.38999938964844,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": -0.03229336924595039,
-      "last_timestamp": "2026-10-09 18:30:00+00:00",
+      "change_pct": 0.0,
+      "last_timestamp": "2026-10-09 18:55:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -137,17 +137,17 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/trending-stock-nextera-energy-inc-120002466.html?.tsrc=rss"
         }
       ],
-      "vwap": 76.4678699130378,
-      "price_vs_vwap_pct": 1.2124395920573905,
+      "vwap": 76.45681838599434,
+      "price_vs_vwap_pct": 1.220533398267909,
       "vwap_hold_15m": true
     },
     {
       "ticker": "CBRS",
-      "yfinance_price": 164.5500030517578,
+      "yfinance_price": 164.28500366210938,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": 0.17655458092067366,
-      "last_timestamp": "2026-10-09 18:30:00+00:00",
+      "change_pct": 0.05177022865230363,
+      "last_timestamp": "2026-10-09 18:55:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -165,17 +165,17 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-says-cerebras-cbrs-022443645.html?.tsrc=rss"
         }
       ],
-      "vwap": 178.68104677014668,
-      "price_vs_vwap_pct": -7.908529737105741,
+      "vwap": 178.63738024951036,
+      "price_vs_vwap_pct": -8.034363562292734,
       "vwap_hold_15m": false
     },
     {
       "ticker": "INTC",
-      "yfinance_price": 105.3550033569336,
+      "yfinance_price": 105.23500061035156,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": -0.1388602338697864,
-      "last_timestamp": "2026-10-09 18:30:00+00:00",
+      "change_pct": 0.0237634503340578,
+      "last_timestamp": "2026-10-09 18:55:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -193,17 +193,17 @@
           "url": "https://247wallst.com/investing/2026/10/09/intel-is-worth-more-than-coca-cola-and-pepsico-put-together/?.tsrc=rss"
         }
       ],
-      "vwap": 115.5397889191575,
-      "price_vs_vwap_pct": -8.814959467642913,
+      "vwap": 115.50158630313418,
+      "price_vs_vwap_pct": -8.888696702258214,
       "vwap_hold_15m": false
     },
     {
       "ticker": "NVT",
-      "yfinance_price": 168.2100067138672,
+      "yfinance_price": 167.5399932861328,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": 0.02973540120652096,
-      "last_timestamp": "2026-10-09 18:30:00+00:00",
+      "change_pct": 0.011877656134018366,
+      "last_timestamp": "2026-10-09 18:55:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -221,17 +221,17 @@
           "url": "https://finance.yahoo.com/technology/articles/nvent-completes-acquisition-maverick-power-114500835.html?.tsrc=rss"
         }
       ],
-      "vwap": 166.12120225851706,
-      "price_vs_vwap_pct": 1.257397867913057,
+      "vwap": 166.10908808895059,
+      "price_vs_vwap_pct": 0.8614249910372074,
       "vwap_hold_15m": true
     },
     {
       "ticker": "MRVL",
-      "yfinance_price": 274.0299987792969,
+      "yfinance_price": 273.8349914550781,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": 0.04198026058734872,
-      "last_timestamp": "2026-10-09 18:30:00+00:00",
+      "change_pct": -0.00912652370600453,
+      "last_timestamp": "2026-10-09 18:55:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -249,17 +249,17 @@
           "url": "https://stocktwits.com/news-articles/markets/equity/stocktwits-wall-street-wrap-analysts-turn-bullish-on-palantir-marvell-and-cava-as-nike-faces-downgrade/cZD6ks5RBVu?.tsrc=rss"
         }
       ],
-      "vwap": 275.12469637715185,
-      "price_vs_vwap_pct": -0.3978914333282235,
+      "vwap": 274.9054442283287,
+      "price_vs_vwap_pct": -0.38938944125147534,
       "vwap_hold_15m": false
     },
     {
       "ticker": "VRT",
-      "yfinance_price": 245.30499267578125,
+      "yfinance_price": 243.2949981689453,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": -0.09570767157174309,
-      "last_timestamp": "2026-10-09 18:30:00+00:00",
+      "change_pct": -0.14160286552593604,
+      "last_timestamp": "2026-10-09 18:55:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -277,17 +277,17 @@
           "url": "https://www.fool.com/investing/2026/10/07/anthropic-and-openai-are-both-headed-to-ipo-these/?.tsrc=rss"
         }
       ],
-      "vwap": 247.67503069956805,
-      "price_vs_vwap_pct": -0.9569143958890525,
+      "vwap": 247.56889391293424,
+      "price_vs_vwap_pct": -1.7263460188548518,
       "vwap_hold_15m": false
     },
     {
       "ticker": "AVGO",
-      "yfinance_price": 362.3699951171875,
+      "yfinance_price": 362.1549987792969,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": -0.004833800628800677,
-      "last_timestamp": "2026-10-09 18:30:00+00:00",
+      "change_pct": 0.056633945393635976,
+      "last_timestamp": "2026-10-09 18:55:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -305,17 +305,17 @@
           "url": "https://247wallst.com/investing/2026/10/09/broadcom-turned-10000-into-more-than-260000-can-it-happen-again/?.tsrc=rss"
         }
       ],
-      "vwap": 361.19695587643645,
-      "price_vs_vwap_pct": 0.32476443161175705,
+      "vwap": 361.1037986624749,
+      "price_vs_vwap_pct": 0.29110746569700474,
       "vwap_hold_15m": true
     },
     {
       "ticker": "ANET",
-      "yfinance_price": 216.99000549316406,
+      "yfinance_price": 216.6800994873047,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": -0.03685531319634894,
-      "last_timestamp": "2026-10-09 18:30:00+00:00",
+      "change_pct": 4.929459436198158e-05,
+      "last_timestamp": "2026-10-09 18:55:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -333,17 +333,17 @@
           "url": "https://finance.yahoo.com/technology/ai/articles/elite-ai-stocks-own-october-071235362.html?.tsrc=rss"
         }
       ],
-      "vwap": 209.28830097334998,
-      "price_vs_vwap_pct": 3.6799498509927586,
+      "vwap": 209.2036431384906,
+      "price_vs_vwap_pct": 3.57376967085834,
       "vwap_hold_15m": true
     },
     {
       "ticker": "ETN",
-      "yfinance_price": 430.95001220703125,
+      "yfinance_price": 430.1000061035156,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": 0.041791024897430695,
-      "last_timestamp": "2026-10-09 18:30:00+00:00",
+      "change_pct": -0.05228747972645387,
+      "last_timestamp": "2026-10-09 18:55:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -361,8 +361,8 @@
           "url": "https://www.fool.com/investing/2026/10/08/data-center-run-out-transformers-stock-backlog/?.tsrc=rss"
         }
       ],
-      "vwap": 432.90868802178966,
-      "price_vs_vwap_pct": -0.4524454853767734,
+      "vwap": 432.8936988680916,
+      "price_vs_vwap_pct": -0.645353067480714,
       "vwap_hold_15m": false
     },
     {
@@ -379,11 +379,11 @@
     },
     {
       "ticker": "NOK",
-      "yfinance_price": 10.345000267028809,
+      "yfinance_price": 10.375,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": 0.0,
-      "last_timestamp": "2026-10-09 18:30:00+00:00",
+      "change_pct": -0.04817065882265492,
+      "last_timestamp": "2026-10-09 18:55:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -401,17 +401,17 @@
           "url": "https://www.barchart.com/story/news/5011820/nokias-ceo-issues-bullish-verdict-on-ai-infrastructure-growth-as-nok-stock-doubles?.tsrc=rss"
         }
       ],
-      "vwap": 10.393775130950194,
-      "price_vs_vwap_pct": -0.46926995539999794,
+      "vwap": 10.39365924194934,
+      "price_vs_vwap_pct": -0.1795252424096283,
       "vwap_hold_15m": false
     },
     {
       "ticker": "AMAT",
-      "yfinance_price": 508.614990234375,
+      "yfinance_price": 507.3999938964844,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": -0.012778651085587622,
-      "last_timestamp": "2026-10-09 18:30:00+00:00",
+      "change_pct": -0.021695611888117305,
+      "last_timestamp": "2026-10-09 18:55:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -429,17 +429,17 @@
           "url": "https://finance.yahoo.com/technology/articles/applied-materials-ucla-engineering-accelerate-200500850.html?.tsrc=rss"
         }
       ],
-      "vwap": 518.1604178189557,
-      "price_vs_vwap_pct": -1.8421761401149372,
+      "vwap": 518.1347839091712,
+      "price_vs_vwap_pct": -2.0718141970118453,
       "vwap_hold_15m": false
     },
     {
       "ticker": "MU",
-      "yfinance_price": 1034.68994140625,
+      "yfinance_price": 1028.22998046875,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": -0.013530208283818457,
-      "last_timestamp": "2026-10-09 18:30:00+00:00",
+      "change_pct": -0.2057548568370593,
+      "last_timestamp": "2026-10-09 18:55:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -457,18 +457,23 @@
           "url": "https://www.thestreet.com/investing/stocks/nvidia-and-micron-are-about-to-lord-their-successes-all-over-wall-street?.tsrc=rss"
         }
       ],
-      "vwap": 1058.4443674395811,
-      "price_vs_vwap_pct": -2.24427723969981,
+      "vwap": 1063.0143249122034,
+      "price_vs_vwap_pct": -3.272236660246919,
       "vwap_hold_15m": false
     },
     {
       "ticker": "TSLA",
-      "yfinance_price": 383.610107421875,
+      "yfinance_price": 384.1499938964844,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": 0.005242859348886242,
-      "last_timestamp": "2026-10-09 18:30:00+00:00",
+      "change_pct": -0.031226773002879238,
+      "last_timestamp": "2026-10-09 18:55:00+00:00",
       "news": [
+        {
+          "source": "Yahoo Finance",
+          "title": "Tesla's China Retail Sales Fall 9% Even as Shanghai Exports Surge 58%",
+          "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62282404/tesla-china-sales-exports-september?utm_source=yahooFinance&utm_campaign=partner_feed&utm_medium=referral&.tsrc=rss"
+        },
         {
           "source": "Yahoo Finance",
           "title": "Tesla’s China-Made EV Sales Hit 2026 High In September – Yorkville Says TSLA Is One Of The Clearest Ways To Own ‘Physical AI’ In Public Markets",
@@ -478,24 +483,19 @@
           "source": "Yahoo Finance",
           "title": "Tesla renames ‘Full Self-Driving’ to ‘Tesla Assisted Driving’ in Europe",
           "url": "https://finance.yahoo.com/technology/ai/articles/tesla-renames-full-self-driving-160726480.html?.tsrc=rss"
-        },
-        {
-          "source": "Yahoo Finance",
-          "title": "Tesla Rises 3% as Europe Rebrand Drops Full Self-Driving Name; Rivian Eases, Lucid Ticks Up",
-          "url": "https://247wallst.com/investing/2026/10/09/tesla-rises-3-as-europe-rebrand-drops-full-self-driving-name-rivian-eases-lucid-ticks-up/?.tsrc=rss"
         }
       ],
-      "vwap": 369.59504136349153,
-      "price_vs_vwap_pct": 3.792005976779289,
+      "vwap": 368.241358485801,
+      "price_vs_vwap_pct": 4.320165305738399,
       "vwap_hold_15m": true
     },
     {
       "ticker": "DLR",
-      "yfinance_price": 178.02499389648438,
+      "yfinance_price": 178.67999267578125,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": 0.0,
-      "last_timestamp": "2026-10-09 18:30:00+00:00",
+      "change_pct": -0.016794827910215915,
+      "last_timestamp": "2026-10-09 18:55:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -513,17 +513,17 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/digital-realty-announces-pricing-1-230500979.html?.tsrc=rss"
         }
       ],
-      "vwap": 178.20485343542873,
-      "price_vs_vwap_pct": -0.10092852999064039,
-      "vwap_hold_15m": false
+      "vwap": 178.20566169575935,
+      "price_vs_vwap_pct": 0.26617054447557464,
+      "vwap_hold_15m": true
     },
     {
       "ticker": "RKLB",
-      "yfinance_price": 68.33000183105469,
+      "yfinance_price": 68.56999969482422,
       "twelvedata_price": null,
       "twelvedata_status": "missing_key",
-      "change_pct": -0.306389089097725,
-      "last_timestamp": "2026-10-09 18:30:00+00:00",
+      "change_pct": 0.0583699346853539,
+      "last_timestamp": "2026-10-09 18:55:00+00:00",
       "news": [
         {
           "source": "Yahoo Finance",
@@ -541,8 +541,8 @@
           "url": "https://stocktwits.com/news-articles/markets/equity/rklb-cathie-wood-ark-neutron-close-falcon-9-firms-dire-need-launches/cZD6gN8RBV1?.tsrc=rss"
         }
       ],
-      "vwap": 72.0642640409832,
-      "price_vs_vwap_pct": -5.1818501994342565,
+      "vwap": 72.05081409694913,
+      "price_vs_vwap_pct": -4.831054923878087,
       "vwap_hold_15m": false
     }
   ]
